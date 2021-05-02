@@ -8,16 +8,10 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>TITLE FOR APP</h1>
         <p>
-          Edit This like a BOSSSSS<code>src/App.js</code> and save to reload.
+          Edit This like a BOSSSSS
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h3>helloworld</h3>
+        <h4>This is a test</h4>
       </header>
     </div>
   );
