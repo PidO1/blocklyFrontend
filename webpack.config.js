@@ -1,7 +1,10 @@
 const path = require('path');
 module.exports = {
  "mode": "none",
- "entry": "./src/index.js",
+ "entry": [
+  './src/index.js',
+  './src/index.css'
+],
  "output": {
    "path": __dirname + '/build',
    "filename": "bundle.js"
@@ -18,6 +21,18 @@ devServer: {
           "css-loader"
         ]
       },
+     {
+       "test": /\.js$/,
+       "exclude": /node_modules/,
+       "use": {
+         "loader": "babel-loader",
+         "options": {
+           "presets": [
+             "@babel/preset-env",
+           ]
+         }
+       }
+     },
     ]
   }
  
