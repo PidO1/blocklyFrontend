@@ -1,2 +1,2 @@
 import './styles/main.css';
-alert("connected!")
+import './js/start.js'
