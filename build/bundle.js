@@ -9539,17 +9539,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(321);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _legom_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(322);
 // Imports
 
-
-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_legom_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n  body {\r\n    /* background: rgb(46, 46, 46); */\r\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    \r\n    \r\n   \r\nmin-height: 100vh;\r\nbackground-size: cover;background-repeat: no-repeat;\r\n\r\n  }\r\n  nav {\r\n    position: fixed;\r\n    top: 0;\r\n    color: #fff;\r\n    background-color: rgba(255,255,255,0.06);\r\n    \r\n     padding: 20px;\r\n    backdrop-filter: blur(10px);\r\n    width: 100%;\r\n    margin-bottom: 10px;\r\n    min-height: 5vh;\r\n    display: flex;\r\n    justify-content: flex-end;\r\n \r\n    \r\n\r\n  }\r\n  footer{\r\n    color: #fff;\r\n    background-color: rgba(255,255,255,0.06);\r\n    \r\n     \r\n    backdrop-filter: blur(10px);\r\n    width: 100%; \r\n    position:absolute;\r\n   bottom:0;\r\n   height:60px;\r\n  }\r\n \r\n  h1{\r\n\r\n    display:flex;\r\n    justify-content:center;\r\n    align-items:center;\r\n    color: #fff;\r\n    font-weight: bolder;\r\n    \r\n   \r\n    \r\n  }\r\n  \r\n button {\r\n    display: inline-block;\r\n    min-width: 6vw;\r\n    min-height:3vw;\r\n    border: 0;\r\n    text-decoration: none;\r\n    border-radius: 15px;\r\n    background-color: rgba(255,255,255,0.1);\r\n    border: 1px solid rgba(255,255,255,0.1);\r\n    backdrop-filter: blur(30px);\r\n    color: rgba(255,255,255,0.8);\r\n    font-size: 14px;\r\n    letter-spacing: 2px;\r\n    cursor: pointer;\r\n    text-transform: uppercase;\r\n    margin-left: 5px;\r\n    margin-right: 5px;\r\n  }\r\n  \r\nbutton:hover {\r\n    background-color: rgba(255,255,255,0.2);\r\n  }\r\n  button:active {\r\n    background-color: rgba(255,255,255,0.2);\r\n    border: 1px;\r\n    border-color: rgb(241, 4, 4);\r\n  }\r\n  a{color: rgba(255,255,255,0.8);\r\n    font-size: 14px;\r\n    letter-spacing: 2px;\r\n    \r\n        \r\n        text-decoration: none;\r\n        border:none\r\n    }\r\n    a:hover {\r\n        color: rgba(255,255,255,0.8);\r\n        text-decoration:none; \r\n        cursor:pointer;  \r\n    }\r\n    .slide-in-fwd-center {\r\n        -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\r\n                animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\r\n    }\r\n   \r\n@-webkit-keyframes slide-in-fwd-center {\r\n    0% {\r\n      -webkit-transform: translateZ(-1400px);\r\n              transform: translateZ(-1400px);\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      -webkit-transform: translateZ(0);\r\n              transform: translateZ(0);\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @keyframes slide-in-fwd-center {\r\n    0% {\r\n      -webkit-transform: translateZ(-1400px);\r\n              transform: translateZ(-1400px);\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      -webkit-transform: translateZ(0);\r\n              transform: translateZ(0);\r\n      opacity: 1;\r\n    }\r\n  }\r\n  \r\n  \r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n  body {\r\n    background: rgb(46, 46, 46);\r\n    \r\n    \r\n    \r\n   \r\nmin-height: 100vh;\r\nbackground-size: cover;background-repeat: no-repeat;\r\n\r\n  }\r\n  nav {\r\n    position: fixed;\r\n    top: 0;\r\n    color: #fff;\r\n    background-color: rgba(255,255,255,0.06);\r\n    \r\n     padding: 20px;\r\n    backdrop-filter: blur(10px);\r\n    width: 100%;\r\n    margin-bottom: 10px;\r\n    min-height: 5vh;\r\n    display: flex;\r\n    justify-content: flex-end;\r\n \r\n    \r\n\r\n  }\r\n  footer{\r\n    color: #fff;\r\n    background-color: rgba(255,255,255,0.06);\r\n    \r\n     \r\n    backdrop-filter: blur(10px);\r\n    width: 100%; \r\n    position:absolute;\r\n   bottom:0;\r\n   height:60px;\r\n  }\r\n \r\n  h1{\r\n\r\n    display:flex;\r\n    justify-content:center;\r\n    align-items:center;\r\n    color: #fff;\r\n    font-weight: bolder;\r\n    \r\n   \r\n    \r\n  }\r\n  \r\n button {\r\n    display: inline-block;\r\n    min-width: 6vw;\r\n    min-height:3vw;\r\n    border: 0;\r\n    text-decoration: none;\r\n    border-radius: 15px;\r\n    background-color: rgba(255,255,255,0.1);\r\n    border: 1px solid rgba(255,255,255,0.1);\r\n    backdrop-filter: blur(30px);\r\n    color: rgba(255,255,255,0.8);\r\n    font-size: 14px;\r\n    letter-spacing: 2px;\r\n    cursor: pointer;\r\n    text-transform: uppercase;\r\n    margin-left: 5px;\r\n    margin-right: 5px;\r\n  }\r\n  \r\nbutton:hover {\r\n    background-color: rgba(255,255,255,0.2);\r\n  }\r\n  button:active {\r\n    background-color: rgba(255,255,255,0.2);\r\n    border: 1px;\r\n    border-color: rgb(241, 4, 4);\r\n  }\r\n  a{color: rgba(255,255,255,0.8);\r\n    font-size: 14px;\r\n    letter-spacing: 2px;\r\n    \r\n        \r\n        text-decoration: none;\r\n        border:none\r\n    }\r\n    a:hover {\r\n        color: rgba(255,255,255,0.8);\r\n        text-decoration:none; \r\n        cursor:pointer;  \r\n    }\r\n    .slide-in-fwd-center {\r\n        -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\r\n                animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\r\n    }\r\n   \r\n@-webkit-keyframes slide-in-fwd-center {\r\n    0% {\r\n      -webkit-transform: translateZ(-1400px);\r\n              transform: translateZ(-1400px);\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      -webkit-transform: translateZ(0);\r\n              transform: translateZ(0);\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @keyframes slide-in-fwd-center {\r\n    0% {\r\n      -webkit-transform: translateZ(-1400px);\r\n              transform: translateZ(-1400px);\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      -webkit-transform: translateZ(0);\r\n              transform: translateZ(0);\r\n      opacity: 1;\r\n    }\r\n  }\r\n  \r\n  \r\n ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9627,59 +9621,8 @@ module.exports = function (cssWithMappingToString) {
 };
 
 /***/ }),
-/* 321 */
-/***/ ((module) => {
-
-"use strict";
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    // eslint-disable-next-line no-param-reassign
-    options = {};
-  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-
-
-  url = url && url.__esModule ? url.default : url;
-
-  if (typeof url !== "string") {
-    return url;
-  } // If url is already wrapped in quotes, remove them
-
-
-  if (/^['"].*['"]$/.test(url)) {
-    // eslint-disable-next-line no-param-reassign
-    url = url.slice(1, -1);
-  }
-
-  if (options.hash) {
-    // eslint-disable-next-line no-param-reassign
-    url += options.hash;
-  } // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-
-
-  if (/["'() \t\n]/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
-  }
-
-  return url;
-};
-
-/***/ }),
+/* 321 */,
 /* 322 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "c27e68bb64356e1d09ac91ffddd3bd29.jpg");
-
-/***/ }),
-/* 323 */,
-/* 324 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9753,18 +9696,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -9779,26 +9710,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -9850,7 +9761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(318);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(324);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(322);
 
             
 
