@@ -1,4 +1,8 @@
 
 import './js/start.js'
-import './js/particlesaddon'
+import './js/ParticlesConfig'
+import './js/ButtonHandlers'
+import './js/hashListener.js'
 import './styles/main.css'
+
+
