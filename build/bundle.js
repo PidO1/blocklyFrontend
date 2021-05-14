@@ -8770,7 +8770,7 @@ document.getElementById("login").addEventListener("click", function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_SignUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(312);
-/* harmony import */ var _views_Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(314);
+/* harmony import */ var _pages_login_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(314);
 /* harmony import */ var _views_PostView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(315);
 /* harmony import */ var _views_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(316);
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8792,7 +8792,7 @@ var routes = [{
   view: _views_PostView__WEBPACK_IMPORTED_MODULE_2__.default
 }, {
   hash: "#login",
-  view: _views_Login__WEBPACK_IMPORTED_MODULE_1__.default
+  view: _pages_login_login__WEBPACK_IMPORTED_MODULE_1__.default
 }];
 var match;
 window.addEventListener("hashchange", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
@@ -8976,7 +8976,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ _default)
 /* harmony export */ });
-/* harmony import */ var _AbstractView_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(313);
+/* harmony import */ var _js_views_AbstractView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(313);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -9017,10 +9017,11 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
     _this = _super.call(this, params);
 
-    _this.setTitle("Posts");
+    _this.setTitle("Login");
 
     return _this;
-  }
+  } //@html:start
+
 
   _createClass(_default, [{
     key: "getHtml",
@@ -9030,7 +9031,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                return _context.abrupt("return", "\n            <h1>Login</h1>\n            <p>Log into the site</p>\n        ");
+                return _context.abrupt("return", "\n<section class=\"login\">\n  <h1>Login</h1>\n  <p>Hello World</p>\n  <p>This is the login page</p>\n  <div>text in a div</div>\n</section>\n");
 
               case 1:
               case "end":
@@ -9045,11 +9046,12 @@ var _default = /*#__PURE__*/function (_AbstractView) {
       }
 
       return getHtml;
-    }()
+    }() //@html:end
+
   }]);
 
   return _default;
-}(_AbstractView_js__WEBPACK_IMPORTED_MODULE_0__.default);
+}(_js_views_AbstractView__WEBPACK_IMPORTED_MODULE_0__.default);
 
 
 
@@ -9543,7 +9545,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n  body {\r\n    display: block;\r\n    background: rgb(46, 46, 46);   \r\nmin-height: 100vh;\r\nbackground-size: cover;background-repeat: no-repeat;\r\n\r\n  }\r\n  nav {\r\n    position: relative;\r\n    top: 0;\r\n    color: #fff;\r\n    background-color: rgba(255,255,255,0.06);\r\n    \r\n     padding: 20px;\r\n    backdrop-filter: blur(10px);\r\n    width: 100%;\r\n    margin-bottom: 10px;\r\n    min-height: 5vh;\r\n    display: flex;\r\n    justify-content: flex-end;\r\n \r\n    \r\n\r\n  }\r\n  footer{\r\n    color: #fff;\r\n    background-color: rgba(255,255,255,0.06);\r\n    \r\n     \r\n    backdrop-filter: blur(10px);\r\n    width: 100%; \r\n    position:fixed;\r\n   bottom:0;\r\n   height:60px;\r\n  }\r\n \r\n  h1{\r\n\r\n    display:flex;\r\n    justify-content:center;\r\n    align-items:center;\r\n    color: #fff;\r\n    font-weight: bolder;\r\n    \r\n   \r\n    \r\n  }\r\n  \r\n button {\r\n    display: inline-block;\r\n    min-width: 6vw;\r\n    min-height:3vw;\r\n    border: 0;\r\n    text-decoration: none;\r\n    border-radius: 15px;\r\n    background-color: rgba(255,255,255,0.1);\r\n    border: 1px solid rgba(255,255,255,0.1);\r\n    backdrop-filter: blur(30px);\r\n    color: rgba(255,255,255,0.8);\r\n    font-size: 14px;\r\n    letter-spacing: 2px;\r\n    cursor: pointer;\r\n    text-transform: uppercase;\r\n    margin-left: 5px;\r\n    margin-right: 5px;\r\n  }\r\n  \r\nbutton:hover {\r\n    background-color: rgba(255,255,255,0.2);\r\n  }\r\n  button:active {\r\n    background-color: rgba(255,255,255,0.2);\r\n    border: 1px;\r\n    border-color: rgb(241, 4, 4);\r\n  }\r\n  a{color: rgba(255,255,255,0.8);\r\n    font-size: 14px;\r\n    letter-spacing: 2px;\r\n    \r\n        \r\n        text-decoration: none;\r\n        border:none\r\n    }\r\n    a:hover {\r\n        color: rgba(255,255,255,0.8);\r\n        text-decoration:none; \r\n        cursor:pointer;  \r\n    }\r\n    .slide-in-fwd-center {\r\n        -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\r\n                animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\r\n    }\r\n   \r\n@-webkit-keyframes slide-in-fwd-center {\r\n    0% {\r\n      -webkit-transform: translateZ(-1400px);\r\n              transform: translateZ(-1400px);\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      -webkit-transform: translateZ(0);\r\n              transform: translateZ(0);\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @keyframes slide-in-fwd-center {\r\n    0% {\r\n      -webkit-transform: translateZ(-1400px);\r\n              transform: translateZ(-1400px);\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      -webkit-transform: translateZ(0);\r\n              transform: translateZ(0);\r\n      opacity: 1;\r\n    }\r\n  }\r\n  \r\n  \r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  display: block;\r\n  background: rgb(46, 46, 46);\r\n  min-height: 100vh;\r\n  background-size: cover;\r\n  background-repeat: no-repeat;  \r\n  color:#fff; \r\n}\r\nnav {\r\n  position: relative;\r\n  top: 0;\r\n  color: #fff;\r\n  background-color: rgba(255, 255, 255, 0.06);\r\n\r\n  padding: 20px;\r\n  backdrop-filter: blur(10px);\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n  min-height: 5vh;\r\n  display: flex;\r\n  justify-content: flex-end;\r\n}\r\nfooter {\r\n  color: #fff;\r\n  background-color: rgba(255, 255, 255, 0.06);\r\n\r\n  backdrop-filter: blur(10px);\r\n  width: 100%;\r\n  position: fixed;\r\n  bottom: 0;\r\n  height: 60px;\r\n}\r\n\r\nh1 { \r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: #fff; \r\n  font-weight: bolder;\r\n}\r\n\r\nbutton {\r\n  display: inline-block;\r\n  min-width: 6vw;\r\n  min-height: 3vw;\r\n  border: 0;\r\n  text-decoration: none;\r\n  border-radius: 15px;\r\n  background-color: rgba(255, 255, 255, 0.1);\r\n  border: 1px solid rgba(255, 255, 255, 0.1);\r\n  backdrop-filter: blur(30px);\r\n  color: rgba(255, 255, 255, 0.8);\r\n  font-size: 14px;\r\n  letter-spacing: 2px;\r\n  cursor: pointer;\r\n  text-transform: uppercase;\r\n  margin-left: 5px;\r\n  margin-right: 5px;\r\n}\r\n\r\nbutton:hover {\r\n  background-color: rgba(255, 255, 255, 0.2);\r\n}\r\nbutton:active {\r\n  background-color: rgba(255, 255, 255, 0.2);\r\n  border: 1px;\r\n  border-color: rgb(241, 4, 4);\r\n}\r\na {\r\n  color: rgba(255, 255, 255, 0.8);\r\n  font-size: 14px;\r\n  letter-spacing: 2px;\r\n\r\n  text-decoration: none;\r\n  border: none;\r\n}\r\na:hover {\r\n  color: rgba(255, 255, 255, 0.8);\r\n  text-decoration: none;\r\n  cursor: pointer;\r\n}\r\n.slide-in-fwd-center {\r\n  -webkit-animation: slide-in-fwd-center 0.4s\r\n    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;\r\n  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;\r\n}\r\n\r\n@-webkit-keyframes slide-in-fwd-center {\r\n  0% {\r\n    -webkit-transform: translateZ(-1400px);\r\n    transform: translateZ(-1400px);\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    -webkit-transform: translateZ(0);\r\n    transform: translateZ(0);\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes slide-in-fwd-center {\r\n  0% {\r\n    -webkit-transform: translateZ(-1400px);\r\n    transform: translateZ(-1400px);\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    -webkit-transform: translateZ(0);\r\n    transform: translateZ(0);\r\n    opacity: 1;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9633,13 +9635,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(319);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(323);
 // Imports
+
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_main_css__WEBPACK_IMPORTED_MODULE_1__.default);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 323 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".login {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    background-color: aliceblue;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

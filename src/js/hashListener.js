@@ -1,5 +1,5 @@
 import SignUp from "./views/SignUp";
-import Login from "./views/Login";
+import Login from "../pages/login/login";
 import PostView from "./views/PostView";
 import About from "./views/About";
 
