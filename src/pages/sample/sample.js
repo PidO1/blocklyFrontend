@@ -10,7 +10,7 @@ export default class extends AbstractView {
 async getHtml() {
 return `
 <h>This is a sample</h>
-<div>test 8</div>
+<div>test 6</div>
 `;
 }
 //@html:end

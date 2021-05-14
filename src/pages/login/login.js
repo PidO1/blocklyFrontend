@@ -14,7 +14,7 @@ return `
   <h1>Login</h1>
   <p>Hello World</p>
   <p>This is the login page</p>
-  <div>text in a div</div>
+  <p>I come from a html file :D</p>
 </section>
 `;
 }

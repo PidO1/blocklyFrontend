@@ -82,11 +82,12 @@ gulp.task('server:startStop', async function () {
         root: 'build',
         livereload: true
     });
-    connect.serverClose();
+    return connect.serverClose();
 });
 
 gulp.task('server:reload', function () {
-    connect.reload();
+    npmRunBuild();
+    return connect.reload();
 });
 
 exports.allWatcher = function () {
