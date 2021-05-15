@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;  
   color:#fff; 
 }
-nav {
+/* nav {
   position: relative;
   top: 0;
   color: #fff;
@@ -19,7 +19,7 @@ nav {
   min-height: 5vh;
   display: flex;
   justify-content: flex-end;
-}
+} */
 footer {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.06);
@@ -27,45 +27,19 @@ footer {
   backdrop-filter: blur(10px);
   width: 100%;
   position: fixed;
-  bottom: 0;
-  height: 60px;
+  bottom: 0; 
+  height: auto;
+  padding: 0.5rem;
 }
-
+/* 
 h1 { 
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff; 
   font-weight: bolder;
-}
+} */
 
-button {
-  display: inline-block;
-  min-width: 6vw;
-  min-height: 3vw;
-  border: 0;
-  text-decoration: none;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-button:active {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px;
-  border-color: rgb(241, 4, 4);
-}
 a {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
