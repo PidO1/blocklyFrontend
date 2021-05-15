@@ -87,18 +87,19 @@ gulp.task('server:startStop', async function () {
 
 gulp.task('server:reload', function () {
     npmRunBuild();
-    return connect.reload();
+    connect.reload();
+    return;
 });
 
 exports.allWatcher = function () {
-    watch(['src/*', 'src', 'src/**/*'], gulp.series('server:reload'));
+    watch(['src/*', 'src', 'src/**/*', '!src/pages/**/*.js', '!src/index.css'], gulp.series('css','html','server:reload'));
 };
 //END SERVER
 
 
 //use the command `gulp` to run the below
 exports.default = function () {
-    watch(cssTarget, { events: ['add', 'delete'] }, importCSS);
+    watch(cssTarget, { events: ['add'] }, importCSS);
     watch(htmlTarget, copyHTML);
 }
 
