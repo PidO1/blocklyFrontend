@@ -1,5 +1,5 @@
 import SignUp from "./views/SignUp";
-import Login from "./views/Login";
+import Login from "../pages/login/login";
 import PostView from "./views/PostView";
 import About from "./views/About";
 
@@ -12,12 +12,22 @@ const routes = [
 
 var match;
 
-
-window.addEventListener("hashchange", async function() {
+async function loadContent() {
   match = routes.find(potentialMatch => potentialMatch.hash == location.hash);
   document.querySelector("#app").innerHTML = await new match.view().getHtml();
-  console.log(match.hash+" found it")
-    console.log(location.hash)
-    
-  });
-  
+  console.log(match.hash + " found it")
+  console.log(location.hash)
+}
+
+function hashLoad() {
+  var perfEntries = performance.getEntriesByType("navigation");
+  for (var i = 0; i < perfEntries.length; i++) {
+    var p = perfEntries[i];
+    console.log("type = " + p.type);
+    if (p.type == 'reload')
+      loadContent();
+  }
+}
+
+window.addEventListener("hashchange", loadContent());
+hashLoad();
