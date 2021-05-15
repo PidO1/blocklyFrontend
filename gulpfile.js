@@ -29,7 +29,7 @@ async function importCSS() {
 //END CSS
 
 //HTML
-const htmlTarget = 'src/**/*.html';
+const htmlTarget = 'src/pages/**/*.html';
 
 /**
  * To use the HTML copy
@@ -92,7 +92,7 @@ gulp.task('server:reload', function () {
 });
 
 exports.allWatcher = function () {
-    watch(['src/*', 'src', 'src/**/*', '!src/pages/**/*.js', '!src/index.css'], gulp.series('css','html','server:reload'));
+    watch(['src/*', 'src', 'src/**/*', '!src/pages/**/*.js', '!src/index.css'], gulp.series('css','server:reload'));
 };
 //END SERVER
 
@@ -100,9 +100,8 @@ exports.allWatcher = function () {
 //use the command `gulp` to run the below
 exports.default = function () {
     watch(cssTarget, { events: ['add'] }, importCSS);
-    watch(htmlTarget, copyHTML);
+    watch([htmlTarget, 'src/pages/**/*.js'], copyHTML);
 }
-
 //use the command `gulp css` to run the below
 gulp.task('css', importCSS);
 //use the command `gulp npm:build` to run the below
@@ -111,6 +110,5 @@ gulp.task('npm:build', npmRunBuild);
 gulp.task('build', gulp.series('css', 'html', npmRunBuild));
 //use the command `gulp build:server` to run the below
 gulp.task('build:server', gulp.series('build', gulp.parallel('server:startStop')));
-
 //use the command `gulp local` to run the below
 exports.local = gulp.series('build:server', this.allWatcher);
