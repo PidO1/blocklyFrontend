@@ -57,7 +57,7 @@ async function copyHTML() {
             fs.readFile(file.path, "utf8", (_err, v) => {
                 gulp.src(file.dirname + '\\' + file.basename.replace('html', 'js'))
                     .pipe(replace(/@html:start[\s\S]*?@html:end/gm,
-                        ('@html:start\nasync getHtml() {\nreturn \`\n' + v + '\n\`;\n}\n//@html:end')))
+                        ('@html:start\nasync getHtml() {\nreturn \`\n' + v.split('\`').join('\'') + '\n\`;\n}\n//@html:end')))
                     .pipe(tap(function (file, _t) {
                         fs.writeFile(file.path, file.contents, () => {
                             // console.log(file.dirname + '\\' + file.basename);
@@ -92,7 +92,9 @@ gulp.task('server:reload', function () {
 });
 
 exports.allWatcher = function () {
-    watch(['src/*', 'src', 'src/**/*', '!src/pages/**/*.js', '!src/index.css'], gulp.series('css','server:reload'));
+    watch(cssTarget, { events: ['add'] }, importCSS);
+    watch([htmlTarget], copyHTML);
+    watch(['src/*', 'src', 'src/**/*', '!src/pages/**/*.js', '!src/index.css'], gulp.series('server:reload'));
 };
 //END SERVER
 
@@ -100,7 +102,7 @@ exports.allWatcher = function () {
 //use the command `gulp` to run the below
 exports.default = function () {
     watch(cssTarget, { events: ['add'] }, importCSS);
-    watch([htmlTarget, 'src/pages/**/*.js'], copyHTML);
+    watch([htmlTarget], copyHTML);
 }
 //use the command `gulp css` to run the below
 gulp.task('css', importCSS);
