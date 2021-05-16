@@ -19,11 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dcfcc3d-0bd6-4d63-928a-0ce034bd7708" name="Default Changelist" comment="Added semi-functional Blockly implementation with npm dependencies and packages installed">
+    <list default="true" id="2dcfcc3d-0bd6-4d63-928a-0ce034bd7708" name="Default Changelist" comment="gulp file structure and slight fixes on blockly">
+      <change afterPath="$PROJECT_DIR$/src/pages/blockly/blockly_compressed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/blockly/blocks_compressed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/blockly/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/blockly/javascript_compressed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockly.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blockly/blockly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/blockly.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +71,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621149987815</updated>
-      <workItem from="1621149994726" duration="6040000" />
+      <workItem from="1621149994726" duration="9149000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="gulp file structure and slight fixes on blockly">
+      <created>1621159477400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621159477400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,13 +100,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added semi-functional Blockly implementation with npm dependencies and packages installed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added semi-functional Blockly implementation with npm dependencies and packages installed" />
+    <MESSAGE value="gulp file structure and slight fixes on blockly" />
+    <option name="LAST_COMMIT_MESSAGE" value="gulp file structure and slight fixes on blockly" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1621150255696">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1621159483719">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1621150255696" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1621159483719" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1621157159552">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
