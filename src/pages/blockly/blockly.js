@@ -1,16 +1,10 @@
-import * as Blockly from 'blockly/core';
+import Blockly from 'blockly';
 import 'blockly/blocks';
-import 'blockly/javascript';
+import 'blockly/generators/javascript';
 var blocklyArea = document.getElementById('blocklyArea');
 var blocklyDiv = document.getElementById('blocklyDiv');
 var workspace = Blockly.inject(blocklyDiv,
-    {toolbox: document.getElementById('toolbox'),
-        grid:
-            {spacing: 20,
-                length: 3,
-                colour: '#ccc',
-                snap: false},
-        trashcan: true});
+    {toolbox: document.getElementById('toolbox')});
 var onresize = function(e) {
     var element = blocklyArea;
     var x = 0;
@@ -30,7 +24,8 @@ window.addEventListener('resize', onresize, false);
 onresize();
 Blockly.svgResize(workspace);
 function myUpdateFunction(event) {
-        var code = Blockly.JavaScript.workspaceToCode(workspace);
-        document.getElementById('textarea').value = code;
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    document.getElementById('textarea').value = code;
 }
-workspace.addListener(myUpdateFunction);
+workspace.addChangeListener(myUpdateFunction)
+

@@ -80,7 +80,8 @@ function npmRunBuild() {
 gulp.task('server:startStop', async function () {
     connect.server({
         root: 'build',
-        livereload: true
+        livereload: true,
+        https: true
     });
     return connect.serverClose();
 });
@@ -88,7 +89,6 @@ gulp.task('server:startStop', async function () {
 gulp.task('server:reload', function () {
     npmRunBuild();
     connect.reload();
-    return;
 });
 
 exports.allWatcher = function () {

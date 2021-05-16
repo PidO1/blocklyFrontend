@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Blockly Demo: Resizable Blockly (Part 2)</title>
-    <script src="node_modules/blockly/blockly_compressed.js"></script>
-    <script src="node_modules/blockly/blocks_compressed.js"></script>
-    <script src="node_modules/blockly/msg/en.js"></script>
-    <script src="blockly.js"> </script>
+    <script src="../blocklyFrontend/node_modules/blockly/blockly_compressed.js"></script>
+    <script src="../blocklyFrontend/node_modules/blockly/blocks_compressed.js"></script>
+    <script src="../blocklyFrontend/node_modules/blockly/javascript_compressed.js"></script>
+    <script src="../blocklyFrontend/node_modules/blockly/msg/en.js"></script>
+    <script type="module" src="blockly.js"> </script>
     <style>
         html, body {
             height: 100%;
@@ -45,8 +46,12 @@
 
 <div id="blocklyDiv" style="position: absolute"></div>
 <xml id="toolbox" style="display: none">
-    <block type="controls_if"></block>
-    <block type="controls_whileUntil"></block>
+    <block type="dictionary"></block>
+    <block type="array"></block>
+    <block type="number"></block>
+    <block type="string"></block>
+    <block type="true"></block>
+    <block type="false"></block>
 </xml>
 </body>
 </html>
