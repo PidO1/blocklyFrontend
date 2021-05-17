@@ -5,4 +5,6 @@
 @import './styles/particles.css';
 @import './styles/text.css';
 @import './styles/title-bar.css';
+@import './pages/blockly/blockly.css';
 @import './pages/login/login.css';
+@import './pages/blockly/view/blocklyView.css';

@@ -103,7 +103,7 @@ exports.allWatcher = function () {
 //use the command `gulp` to run the below
 exports.default = function () {
     watch(cssTarget, { events: ['add'] }, importCSS);
-    watch([htmlTarget], copyHTML);
+    watch([htmlTarget, '!src/pages/**/*.js'], copyHTML);
 }
 //use the command `gulp css` to run the below
 gulp.task('css', importCSS);
