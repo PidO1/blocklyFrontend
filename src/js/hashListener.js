@@ -15,8 +15,9 @@ var match;
 async function loadContent() {
   match = routes.find(potentialMatch => potentialMatch.hash == location.hash);
   document.querySelector("#app").innerHTML = await new match.view().getHtml();
-  console.log(match.hash + " found it")
-  console.log(location.hash)
+  console.log(match.hash + " found it");
+  console.log(location.hash);
+  new match.view().afterInit();
 }
 
 function hashLoad() {
@@ -29,5 +30,12 @@ function hashLoad() {
   }
 }
 
-window.addEventListener("hashchange", loadContent());
+//tried using a named function, but wouldn't trigger 
+window.addEventListener("hashchange", async function() {
+  match = routes.find(potentialMatch => potentialMatch.hash == location.hash);
+  document.querySelector("#app").innerHTML = await new match.view().getHtml();
+  console.log(match.hash + " found it");
+  console.log(location.hash);
+  new match.view().afterInit();
+});
 hashLoad();

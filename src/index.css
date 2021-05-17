@@ -1,2 +1,8 @@
+@import './styles/buttons.css';
+@import './styles/input.css';
 @import './styles/main.css';
+@import './styles/material-icons.css';
+@import './styles/particles.css';
+@import './styles/text.css';
+@import './styles/title-bar.css';
 @import './pages/login/login.css';

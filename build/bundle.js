@@ -8643,7 +8643,7 @@ module.exports = function (it, key) {
 particlesJS('particles-js', {
   "particles": {
     "number": {
-      "value": 76,
+      "value": 40,
       "density": {
         "enable": true,
         "value_area": 631.3181133058181
@@ -8653,7 +8653,7 @@ particlesJS('particles-js', {
       "value": "#fafafa"
     },
     "shape": {
-      "type": "circle",
+      "type": "",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -8682,7 +8682,7 @@ particlesJS('particles-js', {
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 40,
+        "speed": 30,
         "size_min": 0.1,
         "sync": false
       }
@@ -8691,7 +8691,7 @@ particlesJS('particles-js', {
       "enable": true,
       "distance": 150,
       "color": "#ffffff",
-      "opacity": 0.4,
+      "opacity": 0.2,
       "width": 1
     },
     "move": {
@@ -8713,11 +8713,11 @@ particlesJS('particles-js', {
     "detect_on": "window",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "grab"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true
@@ -8726,7 +8726,7 @@ particlesJS('particles-js', {
       "grab": {
         "distance": 400,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.1
         }
       },
       "bubble": {
@@ -8755,13 +8755,10 @@ particlesJS('particles-js', {
 /* 310 */
 /***/ (() => {
 
-document.getElementById("login").addEventListener("click", function () {
-  fetch('https://bbd-levelup-backend.herokuapp.com/user/sayhello').then(function (data) {
-    return console.log(data);
-  })["catch"](function (err) {
-    return console.log(err);
-  });
-});
+// document.getElementById("login").addEventListener("click", function() {
+//     fetch('https://bbd-levelup-backend.herokuapp.com/user/sayhello')
+//     .then(data => console.log(data)).catch(err=> console.log(err));
+//   });
 
 /***/ }),
 /* 311 */
@@ -8981,6 +8978,27 @@ var _default = /*#__PURE__*/function () {
 
       return getHtml;
     }()
+  }, {
+    key: "afterInit",
+    value: function () {
+      var _afterInit = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function afterInit() {
+        return _afterInit.apply(this, arguments);
+      }
+
+      return afterInit;
+    }()
   }]);
 
   return _default;
@@ -9024,6 +9042,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 var _default = /*#__PURE__*/function (_AbstractView) {
@@ -9045,9 +9065,11 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
 
   _createClass(_default, [{
-    key: "getHtml",
+    key: "afterInit",
     value: function () {
-      var _getHtml = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+      var _afterInit = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var _this2 = this;
+
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -9060,6 +9082,31 @@ var _default = /*#__PURE__*/function (_AbstractView) {
             }
           }
         }, _callee);
+      }));
+
+      function afterInit() {
+        return _afterInit.apply(this, arguments);
+      }
+
+      return afterInit;
+    }() //@html:start
+
+  }, {
+    key: "getHtml",
+    value: function () {
+      var _getHtml = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                return _context2.abrupt("return", "\n<section class=\"login\">\n  <form class=\"middle\">\n    <h2>Login</h2>\n    <input name=\"email\" autocomplete=\"true\" type=\"email\" placeholder=\"Email\" id=\"loginEmail\" />\n    <input name=\"password\" autocomplete=\"true\" type=\"password\" placeholder=\"Password\" id=\"loginPassword\" />\n    <p style=\"display: flex; justify-content: flex-end;\">\n      <input type=\"checkbox\" id=\"loginShowPassword\"/>\n      <label for=\"loginShowPassword\">Show Password</label> \n    </p> \n    <div class=\"button-bar\">\n      <button id='loginButtonRegister' type=\"button\">Register</button>\n      <button id='loginButtonLogin' type=\"button\">Login</button> \n    </div>\n  </form>\n</section>\n\n");
+
+              case 1:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
       }));
 
       function getHtml() {
@@ -9659,6 +9706,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(323);
 // Imports
 
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh2 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh3 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh4 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh5 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh6 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nbody {\r\n  font-family: \"Poppins\", sans-serif;\r\n}\r\nbutton {\r\n  font-family: \"Open Sans\", sans-serif;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  font-weight: 600;\r\n}\r\nfooter{\r\n    font-size: 12px;\r\n    font-weight: 200;\r\n    font-family: \"Poppins\", sans-serif;\r\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 328 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".title-bar {\r\n\tdisplay: grid;\r\n\tgrid-template-columns: auto 1fr auto;\r\n\tgrid-template-rows: 1fr;\r\n\tgap: 0px 0px;\r\n\tgrid-template-areas: \"start middle end\";\r\n\tposition: sticky;\r\n\t/* position: relative; */\r\n\ttop: 0;\r\n\tcolor: #fff;\r\n\tbackground-color: rgba(255, 255, 255, 0.06);\r\n\tpadding: 1rem;\r\n\tbackdrop-filter: blur(2px); \r\n\twidth: 100%;\r\n}\r\n\r\n.start {\r\n\tgrid-area: start;\r\n}\r\n\r\n.end {\r\n\tgrid-area: end;\r\n}\r\n\r\n.middle {\r\n\tgrid-area: middle;\r\n}\r\n\r\n.title-bar h1 {\r\n\tfont-size: large;\r\n\tmargin: 0;\r\n\ttext-transform: capitalize;\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 329 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
@@ -9685,7 +9772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".login {\r\n    width: 100%;\r\n    height: 100%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    grid-template-rows: 0.5fr 1fr 0.5fr;\r\n    gap: 1rem 1rem;\r\n    grid-template-areas:\r\n        \". . .\"\r\n        \"start middle end\"\r\n        \". . .\"\r\n}\r\n\r\n.login form {\r\n    display: grid;\r\n    grid-auto-flow: row;\r\n    gap: 1rem 1rem;\r\n}\r\n\r\n.login .button-bar {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 1rem;\r\n}\r\n\r\n.button-bar>* {\r\n    transition: all 0.6s;\r\n}\r\n\r\n.login .button-bar button {\r\n    flex: 1;\r\n    width: 100%;\r\n}\r\n\r\n@media (max-width: 800px) {\r\n    .button-bar {\r\n        flex-direction: column;\r\n    }\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
