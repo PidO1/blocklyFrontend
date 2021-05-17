@@ -4,19 +4,14 @@
     <meta charset="utf-8">
     <title>Blockly Demo: Resizable Blockly (Part 2)</title>
     <script src="blockly_compressed.js"></script>
-    <script src="blocks_compressed.js"></script>
     <script src="javascript_compressed.js"></script>
+    <script src="blocks_compressed.js"></script>
     <script src="en.js"></script>
-
+    <link rel="stylesheet" href="blockly.css">
     <style>
         html, body {
             height: 100%;
             margin: 0;
-        }
-        body {
-            background-color: #fff;
-            font-family: sans-serif;
-            overflow: hidden;
         }
         h1 {
             font-weight: normal;
@@ -25,6 +20,9 @@
         table {
             height: 100%;
             width: 100%;
+            background-color: #fff;
+            font-family: sans-serif;
+            overflow: hidden;
         }
         #blocklyArea {
             height: 99%;
@@ -32,28 +30,18 @@
     </style>
 </head>
 <body>
+<h1><a href="../../pages/login/login.html">Back To Home</a> &gt;</h1>
+<p>
+    <button onclick="myUpdateFunction()">Generate Code</button>
+</p>
 <table>
-    <tr>
-        <td>
-            <h1><a href="https://developers.google.com/blockly/">Blockly</a> &gt;
-                <a href="../index.html">Demos</a> &gt; Resizable Blockly (Part 2)</h1>
-
-            <p>
-                Once an <a href="index.html">area is defined</a>, Blockly can be
-                injected and positioned over the area.
-                A resize handler keeps it in position as the page changes.
-            </p>
-
-            <p>&rarr; More info on <a href="https://developers.google.com/blockly/guides/configure/web/resizable">injecting resizable Blockly</a>&hellip;</p>
-        </td>
-    </tr>
     <tr>
         <td id="blocklyArea">
         </td>
     </tr>
 </table>
-
 <div id="blocklyDiv" style="position: absolute"></div>
+<div id="textarea"></div>
 
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
     <block type="controls_if"></block>
@@ -93,6 +81,13 @@
     window.addEventListener('resize', onresize, false);
     onresize();
     Blockly.svgResize(demoWorkspace);
+    function myUpdateFunction() {
+        var xml = Blockly.JavaScript.workspaceToCode(demoWorkspace);
+        document.getElementById('blocklyDiv').setAttribute("class", "flipper");
+        document.getElementById('textarea').setAttribute("class", "flipback");
+        document.getElementById('textarea').innerText = xml;
+    }
+
 </script>
 </body>
 </html>

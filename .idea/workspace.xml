@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dcfcc3d-0bd6-4d63-928a-0ce034bd7708" name="Default Changelist" comment="gulp file structure and slight fixes on blockly">
-      <change afterPath="$PROJECT_DIR$/src/pages/blockly/blockly_compressed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/blockly/blocks_compressed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/blockly/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/blockly/javascript_compressed.js" afterDir="false" />
+    <list default="true" id="be8633f4-b34e-455e-a61e-787f0b0e5cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/blockly/blockly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/blockly.html" afterDir="false" />
     </list>
@@ -37,10 +33,16 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sean/gulp_dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1sbn77fTpLxrJd8Yl98iGqYDphK" />
@@ -53,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -66,12 +69,13 @@
       <updated>1621098117052</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2dcfcc3d-0bd6-4d63-928a-0ce034bd7708" name="Default Changelist" comment="Added semi-functional Blockly implementation with npm dependencies and packages installed" />
+      <changelist id="be8633f4-b34e-455e-a61e-787f0b0e5cb6" name="Default Changelist" comment="" />
       <created>1621149987815</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621149987815</updated>
       <workItem from="1621149994726" duration="9149000" />
+      <workItem from="1621267957823" duration="5348000" />
     </task>
     <task id="LOCAL-00002" summary="gulp file structure and slight fixes on blockly">
       <created>1621159477400</created>
@@ -112,5 +116,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1621157159552" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1621270740770">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1621270740770" />
   </component>
 </project>
