@@ -5,6 +5,8 @@ export default class extends AbstractView {
     loader = undefined;
     noProjects = undefined;
     projects = undefined;
+    newProject = undefined;
+    loop = 0;
 
     constructor(params) {
         super(params);
@@ -14,9 +16,11 @@ export default class extends AbstractView {
         this.loader = document.getElementById('loadingContainer');
         this.noProjects = document.getElementById('noProjects');
         this.projects = document.getElementById('projects');
+        this.newProject = document.getElementById('newProject');
         this.removeNoProjects();
+        // this.removeLoader();
         this.removeProjects();
-        //basically a timeout
+        // basically a timeout
         setTimeout(() => {
             this.removeLoader();
             this.addNoProjects();
@@ -56,19 +60,39 @@ return `
         <span></span>
         <span></span>
         <span></span>
-    </div> 
+    </div>
     <section id='noProjects'>
         <label class='leading'>Looks like you dont have any projects.</label>
         <label>Maybe you should create one!</label>
         <button id='newProject'>New Project</button>
     </section>
     <section id='projects'>
-        <button id='newProject' type="button" class="fab extended">
+        <!-- <button id='newProject' type="button" class="fab extended">
             <i class="material-icons">build</i>
-            <label>Build</label>
-        </button>
+            <label>Build</label> 
+        </button> -->
+        <ul id='projects' class="jetBrains"> 
+            <li id='newProject'> 
+                <button>
+                    <i class="material-icons">add</i>
+                    New Project
+                </button>
+            </li>
+            <li id='project1'>
+                <button>
+                    <i class="material-icons">code</i>
+                    Test Project 1
+                </button>
+            </li>
+            <li id='project2'>
+                <button>
+                    <i class="material-icons">code</i>
+                    Test Project 2
+                </button>
+            </li>
+        </ul>
     </section>
-</section>  
+</section>
 `;
 }
 //@html:end
