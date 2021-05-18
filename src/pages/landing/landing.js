@@ -19,7 +19,7 @@ export default class extends AbstractView {
         //basically a timeout
         setTimeout(() => {
             this.removeLoader();
-            document.getElementById('container').appendChild(this.noProjects);
+            this.addNoProjects();
         }, 10000);
     }
 
@@ -27,17 +27,29 @@ export default class extends AbstractView {
         this.loader.remove();
     }
 
+    addLoader() {
+        document.getElementById('container').appendChild(this.loader);
+    }
+
     removeProjects() {
         this.projects.remove();
+    }
+
+    addProjects() {
+        document.getElementById('container').appendChild(this.projects);
     }
 
     removeNoProjects() {
         this.noProjects.remove();
     }
 
+    addNoProjects() {
+        document.getElementById('container').appendChild(this.noProjects);
+    }
+
     //@html:start
-async getHtml() {
-return `
+    async getHtml() {
+        return `
 <section id='container' class="landing">
     <div id="loadingContainer">
         <span></span>
@@ -58,6 +70,6 @@ return `
     </section>
 </section> 
 `;
-}
-//@html:end
+    }
+    //@html:end
 }

@@ -9414,7 +9414,8 @@ var _default = /*#__PURE__*/function (_AbstractView) {
       this.noProjects = document.getElementById('noProjects');
       this.projects = document.getElementById('projects');
       this.removeNoProjects();
-      this.removeProjects();
+      this.removeProjects(); //basically a timeout
+
       setTimeout(function () {
         _this2.removeLoader();
 
@@ -9427,14 +9428,29 @@ var _default = /*#__PURE__*/function (_AbstractView) {
       this.loader.remove();
     }
   }, {
+    key: "addLoader",
+    value: function addLoader() {
+      document.getElementById('container').appendChild(this.loader);
+    }
+  }, {
     key: "removeProjects",
     value: function removeProjects() {
       this.projects.remove();
     }
   }, {
+    key: "addProjects",
+    value: function addProjects() {
+      document.getElementById('container').appendChild(this.projects);
+    }
+  }, {
     key: "removeNoProjects",
     value: function removeNoProjects() {
       this.noProjects.remove();
+    }
+  }, {
+    key: "addNoProjects",
+    value: function addNoProjects() {
+      document.getElementById('container').appendChild(this.noProjects);
     } //@html:start
 
   }, {
@@ -10047,7 +10063,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".landing {\r\n    position: relative;\r\n    padding: 0.5rem;\r\n    display: grid;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 90vh;\r\n}\r\n\r\n#noProjects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n    text-align: center;\r\n    font-size: large;\r\n    display: inline-grid;\r\n    grid-auto-flow: row;\r\n    gap: 4px 8px;\r\n}\r\n\r\n#noProjects:not(:first-child) {\r\n    font-size: medium;\r\n}\r\n\r\n/* \r\n.fab {\r\n    position: absolute;\r\n    top:0;\r\n    left: 0;\r\n} */\r\n\r\n#projects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n}\r\n\r\n#loadingContainer {\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 180px;\r\n    height: 60px;\r\n    display: flex;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    border-left: solid 1px #aaa;\r\n    border-right: solid 1px #aaa;\r\n}\r\n\r\nspan {\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 20%;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border: solid 1px #1de9b6;\r\n    display: inline-block;\r\n    position: absolute;\r\n    transform: translateX(0px);\r\n    animation: 1s circleAnimation infinite ease-in-out;\r\n}\r\n\r\nspan:nth-child(1) {\r\n    left: -60px;\r\n}\r\n\r\nspan:nth-child(2) {\r\n    left: 0px;\r\n}\r\n\r\nspan:nth-child(3) {\r\n    left: 60px;\r\n}\r\n\r\nspan:nth-child(4) {\r\n    left: 120px;\r\n}\r\n\r\n@keyframes circleAnimation {\r\n    0% {\r\n        transform: translateX(0);\r\n    }\r\n\r\n    50% {\r\n        transform: translateX(35px);\r\n    }\r\n\r\n    100% {\r\n        transform: translateX(60px);\r\n    }\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".landing {\r\n    position: relative;\r\n    padding: 0.5rem;\r\n    display: grid;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 90vh;\r\n}\r\n\r\n#noProjects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n    text-align: center;\r\n    font-size: large;\r\n    display: inline-grid;\r\n    grid-auto-flow: row;\r\n    gap: 4px 8px;\r\n}\r\n\r\n#noProjects:not(:first-child) {\r\n    font-size: medium;\r\n}\r\n\r\n#projects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n}\r\n\r\n#loadingContainer {\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 11.25rem;\r\n    height: 3.75rem;\r\n    display: flex;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    border-left: solid 0.0625rem #aaa;\r\n    border-right: solid 0.0625rem #aaa;\r\n}\r\n\r\nspan {\r\n    width: 2.5rem;\r\n    height: 2.5rem;\r\n    border-radius: 20%;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border: solid 0.0625rem #1de9b6;\r\n    display: inline-block;\r\n    position: absolute;\r\n    transform: translateX(0rem);\r\n    animation: 1s circleAnimation infinite ease-in-out;\r\n}\r\n\r\nspan:nth-child(1) {\r\n    left: -3.75rem;\r\n}\r\n\r\nspan:nth-child(2) {\r\n    left: 0rem;\r\n}\r\n\r\nspan:nth-child(3) {\r\n    left: 3.75rem;\r\n}\r\n\r\nspan:nth-child(4) {\r\n    left: 7.5rem;\r\n}\r\n\r\n@keyframes circleAnimation {\r\n    0% {\r\n        transform: translateX(0);\r\n    }\r\n\r\n    50% {\r\n        transform: translateX(2.1875rem);\r\n    }\r\n\r\n    100% {\r\n        transform: translateX(3.75rem);\r\n    }\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
