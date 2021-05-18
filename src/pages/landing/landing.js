@@ -60,7 +60,7 @@ return `
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </div> 
     <section id='noProjects'>
         <label class='leading'>Looks like you dont have any projects.</label>
         <label>Maybe you should create one!</label>
@@ -76,16 +76,16 @@ return `
                 <button>
                     <i class="material-icons">add</i>
                     New Project
-                </button>
+                </button> 
             </li>
             <li id='project1'>
-                <button>
+                <button class="proj">
                     <i class="material-icons">code</i>
                     Test Project 1
                 </button>
             </li>
             <li id='project2'>
-                <button>
+                <button class="proj">
                     <i class="material-icons">code</i>
                     Test Project 2
                 </button>
