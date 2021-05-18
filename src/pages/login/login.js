@@ -44,7 +44,7 @@ return `
     </p> 
     <div class="button-bar">
       <button id='loginButtonRegister' type="button">Register</button>
-      <button id='loginButtonLogin' type="button">Login</button> 
+      <button id='loginButtonLogin' type="button">Login</button>
     </div>
   </form>
 </section>

@@ -8770,6 +8770,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_login_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(314);
 /* harmony import */ var _views_PostView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(315);
 /* harmony import */ var _views_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(316);
+/* harmony import */ var _pages_landing_landing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(317);
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -8778,7 +8779,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 var routes = [{
+  hash: "",
+  view: _pages_landing_landing__WEBPACK_IMPORTED_MODULE_4__.default
+}, {
   hash: "#",
   view: _views_About__WEBPACK_IMPORTED_MODULE_3__.default
 }, {
@@ -9141,7 +9146,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                return _context2.abrupt("return", "\n<section class=\"login\">\n  <form class=\"middle\">\n    <h2>Login</h2>\n    <input name=\"email\" autocomplete=\"true\" type=\"email\" placeholder=\"Email\" id=\"loginEmail\" />\n    <input name=\"password\" autocomplete=\"true\" type=\"password\" placeholder=\"Password\" id=\"loginPassword\" />\n    <p style=\"display: flex; justify-content: flex-end;\">\n      <input type=\"checkbox\" id=\"loginShowPassword\"/>\n      <label for=\"loginShowPassword\">Show Password</label> \n    </p> \n    <div class=\"button-bar\">\n      <button id='loginButtonRegister' type=\"button\">Register</button>\n      <button id='loginButtonLogin' type=\"button\">Login</button> \n    </div>\n  </form>\n</section>\n\n");
+                return _context2.abrupt("return", "\n<section class=\"login\">\n  <form class=\"middle\">\n    <h2>Login</h2>\n    <input name=\"email\" autocomplete=\"true\" type=\"email\" placeholder=\"Email\" id=\"loginEmail\" />\n    <input name=\"password\" autocomplete=\"true\" type=\"password\" placeholder=\"Password\" id=\"loginPassword\" />\n    <p style=\"display: flex; justify-content: flex-end;\">\n      <input type=\"checkbox\" id=\"loginShowPassword\"/>\n      <label for=\"loginShowPassword\">Show Password</label> \n    </p> \n    <div class=\"button-bar\">\n      <button id='loginButtonRegister' type=\"button\">Register</button>\n      <button id='loginButtonLogin' type=\"button\">Login</button>\n    </div>\n  </form>\n</section>\n\n");
 
               case 1:
               case "end":
@@ -9346,11 +9351,136 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _default)
+/* harmony export */ });
+/* harmony import */ var _js_views_AbstractView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(313);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var _default = /*#__PURE__*/function (_AbstractView) {
+  _inherits(_default, _AbstractView);
+
+  var _super = _createSuper(_default);
+
+  function _default(params) {
+    var _this;
+
+    _classCallCheck(this, _default);
+
+    _this = _super.call(this, params);
+
+    _defineProperty(_assertThisInitialized(_this), "loader", undefined);
+
+    _defineProperty(_assertThisInitialized(_this), "noProjects", undefined);
+
+    _defineProperty(_assertThisInitialized(_this), "projects", undefined);
+
+    return _this;
+  }
+
+  _createClass(_default, [{
+    key: "afterInit",
+    value: function afterInit() {
+      var _this2 = this;
+
+      this.loader = document.getElementById('loadingContainer');
+      this.noProjects = document.getElementById('noProjects');
+      this.projects = document.getElementById('projects');
+      this.removeNoProjects();
+      this.removeProjects();
+      setTimeout(function () {
+        _this2.removeLoader();
+
+        document.getElementById('container').appendChild(_this2.noProjects);
+      }, 10000);
+    }
+  }, {
+    key: "removeLoader",
+    value: function removeLoader() {
+      this.loader.remove();
+    }
+  }, {
+    key: "removeProjects",
+    value: function removeProjects() {
+      this.projects.remove();
+    }
+  }, {
+    key: "removeNoProjects",
+    value: function removeNoProjects() {
+      this.noProjects.remove();
+    } //@html:start
+
+  }, {
+    key: "getHtml",
+    value: function () {
+      var _getHtml = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                return _context.abrupt("return", "\n<section id='container' class=\"landing\">\n    <div id=\"loadingContainer\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </div> \n    <section id='noProjects'>\n        <label class='leading'>Looks like you dont have any projects.</label>\n        <label>Maybe you should create one!</label>\n        <button id='newProject'>New Project</button>\n    </section>\n    <section id='projects'>\n        <button id='newProject' type=\"button\" class=\"fab extended\">\n            <i class=\"material-icons\">build</i>\n            <label>Build</label>\n        </button>\n    </section>\n</section> \n");
+
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function getHtml() {
+        return _getHtml.apply(this, arguments);
+      }
+
+      return getHtml;
+    }() //@html:end
+
+  }]);
+
+  return _default;
+}(_js_views_AbstractView__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+
+/***/ }),
+/* 318 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(318);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(319);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(319);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(320);
 
             
 
@@ -9366,7 +9496,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9641,7 +9771,7 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9649,7 +9779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
@@ -9661,7 +9791,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  display: block;\r\n  backg
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ ((module) => {
 
 "use strict";
@@ -9733,8 +9863,8 @@ module.exports = function (cssWithMappingToString) {
 };
 
 /***/ }),
-/* 321 */,
-/* 322 */
+/* 322 */,
+/* 323 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9742,17 +9872,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_buttons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(323);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_input_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(324);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(319);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_material_icons_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(325);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_particles_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(326);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_text_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(327);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_title_bar_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(328);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(329);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_buttons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(324);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_input_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(325);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_material_icons_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(326);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_particles_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(327);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_text_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(328);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_title_bar_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(329);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_pages_landing_landing_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(330);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(331);
 // Imports
+
 
 
 
@@ -9770,29 +9902,10 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_material_i
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_particles_css__WEBPACK_IMPORTED_MODULE_5__.default);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_text_css__WEBPACK_IMPORTED_MODULE_6__.default);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_title_bar_css__WEBPACK_IMPORTED_MODULE_7__.default);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_8__.default);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_pages_landing_landing_css__WEBPACK_IMPORTED_MODULE_8__.default);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_pages_login_login_css__WEBPACK_IMPORTED_MODULE_9__.default);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-/* 323 */
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "button {\r\n  border: none;\r\n  border-radius: 0.25rem;\r\n  background-color: #454545;\r\n  color: rgba(255, 255, 255, 0.8);\r\n  cursor: pointer;\r\n  padding: 0rem 1rem;\r\n  min-height: 2.25rem;\r\n  min-width: 4rem;\r\n  transition: 0.6s;\r\n}\r\n\r\nbutton:hover {\r\n  background-color: hsla(0, 0%, 100%, 0.2);\r\n  box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n  border-radius: 0.5rem;\r\n}\r\n\r\nbutton:active {\r\n  background-color: hsla(0, 0%, 100%, 0.3);\r\n  box-shadow: none;\r\n}\r\n\r\nbutton .button-icon {\r\n  padding-left: 0.5rem;\r\n  width: 1.5rem;\r\n  height: 1.5rem;\r\n}\r\n\r\nbutton.icon-button {\r\n  padding-left: 0.05rem;\r\n  padding-right: 1rem;\r\n}\r\nbutton.liquid {\r\n  \r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9806,13 +9919,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "input[type=text],\r\ninput[type=email],\r\ninput[type=password] {\r\n    width: 100%;\r\n    padding: 1rem 1.5rem;\r\n    background-color: rgba(255, 255, 255, 0.06);\r\n    border: 1px solid rgba(255, 255, 255, 0.2);\r\n    transition: 0.6s;\r\n    color: #fff;\r\n}\r\n\r\ninput[type=text]:focus,\r\ninput[type=email]:focus,\r\ninput[type=password]:focus {\r\n    background-color: rgba(255, 255, 255, 0.1);\r\n    border: 1px solid rgba(255, 255, 255, 0.2);\r\n    border-radius: 0;\r\n}\r\n\r\ninput[type=text]:hover,\r\ninput[type=email]:hover,\r\ninput[type=password]:hover {\r\n    background-color: hsla(0, 0%, 100%, 0.2);\r\n    box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n}\r\n\r\n/* Base for label styling */\r\n[type=\"checkbox\"]:not(:checked),\r\n[type=\"checkbox\"]:checked {\r\n    position: absolute;\r\n    left: 0;\r\n    opacity: 0.01;\r\n}\r\n\r\n[type=\"checkbox\"]:not(:checked)+label,\r\n[type=\"checkbox\"]:checked+label {\r\n    position: relative;\r\n    padding-left: 2rem;\r\n    cursor: pointer;\r\n}\r\n\r\n/* checkbox aspect */\r\n[type=\"checkbox\"]:not(:checked)+label:before,\r\n[type=\"checkbox\"]:checked+label:before {\r\n    content: '';\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 1.4em;\r\n    height: 1.4em;\r\n    background: rgba(255, 255, 255, 0.06); \r\n    border: 1px solid rgba(255, 255, 255, 0.2);\r\n    transition: all .5s;\r\n}\r\n\r\n/* checked mark aspect */\r\n[type=\"checkbox\"]:not(:checked)+label:after,\r\n[type=\"checkbox\"]:checked+label:after {\r\n    content: '✕';\r\n    position: absolute;\r\n    top: .5em;\r\n    left: .12em;\r\n    font-size: 1.375em;\r\n    color: #1de9b6;\r\n    line-height: 0;\r\n    -webkit-transition: all .2s;\r\n    transition: all .2s;\r\n}\r\n\r\n/* checked mark aspect changes */\r\n[type=\"checkbox\"]:not(:checked)+label:after {\r\n    opacity: 0; \r\n    -webkit-transform: scale(0) rotate(45deg);\r\n    transform: scale(0) rotate(45deg);\r\n}\r\n\r\n[type=\"checkbox\"]:checked+label:after {\r\n    opacity: 1;\r\n    -webkit-transform: scale(1) rotate(0);\r\n    transform: scale(1) rotate(0);\r\n}\r\n\r\n/* Disabled checkbox */\r\n[type=\"checkbox\"]:disabled:not(:checked)+label:before,\r\n[type=\"checkbox\"]:disabled:checked+label:before {\r\n    box-shadow: none;\r\n    border-color: #bbb;\r\n    background-color: #e9e9e9;\r\n}\r\n\r\n[type=\"checkbox\"]:disabled:checked+label:after {\r\n    color: #777;\r\n}\r\n\r\n[type=\"checkbox\"]:disabled+label {\r\n    color: #aaa;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "button {\r\n  border: none;\r\n  border-radius: 0.25rem;\r\n  background-color: #454545;\r\n  color: rgba(255, 255, 255, 0.8);\r\n  cursor: pointer;\r\n  padding: 0rem 1rem;\r\n  min-height: 2.25rem;\r\n  min-width: 4rem;\r\n  transition: 0.6s;\r\n}\r\n\r\nbutton:hover {\r\n  background-color: hsla(0, 0%, 100%, 0.2);\r\n  box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n  border-radius: 0.5rem;\r\n}\r\n\r\nbutton:active {\r\n  background-color: hsla(0, 0%, 100%, 0.3);\r\n  box-shadow: none;\r\n}\r\n\r\nbutton .button-icon {\r\n  padding-left: 0.5rem;\r\n  width: 1.5rem;\r\n  height: 1.5rem;\r\n}\r\n\r\nbutton.icon-button {\r\n  padding-left: 0.05rem;\r\n  padding-right: 1rem;\r\n}\r\n\r\nbutton.fab{\r\n  color: #1de9b6;\r\n  min-height: 3.5rem;\r\n  max-height: 3.5rem;\r\n  min-width: 3.5rem;\r\n  max-width: 3.5rem;\r\n  font-size: 1.5rem;\r\n  padding: 0;\r\n  border-radius: 3.5rem;\r\n  display: grid;\r\n  grid-gap: 1rem;\r\n  padding: 0 1rem;\r\n  grid-template-columns: auto auto;\r\n  align-items: center;\r\n  overflow: hidden;\r\n  transition: all 0.2s;\r\n}\r\n\r\nbutton.fab label {\r\n  font-size: 16px;\r\n}\r\n\r\nbutton.fab:hover {\r\n  background-color: hsla(165, 82%, 51%, 0.2);\r\n  box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n  border-radius: 3rem;\r\n}\r\n\r\nbutton.fab:active {\r\n  background-color: hsla(165, 82%, 51%, 0.3);\r\n}\r\n\r\nbutton.fab.mini {\r\n  min-height: 2.5rem;\r\n  min-width: 2.5rem;\r\n  font-size: 1.5rem;\r\n  padding: 0;\r\n  border-radius: 50%;\r\n}\r\n\r\nbutton.fab.extended{\r\n  border-radius: 3.5rem;\r\n  display: grid;\r\n  grid-gap: 0.75rem;\r\n  padding: 0 0.75rem ;\r\n  max-width: max-content;\r\n  grid-template-columns: auto auto;\r\n  align-items: center;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9826,14 +9939,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".material-icons {\r\n    font-family: 'Material Icons';\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-size: 24px;\r\n    /* Preferred icon size */\r\n    display: inline-block;\r\n    line-height: 1;\r\n    text-transform: none;\r\n    letter-spacing: normal;\r\n    word-wrap: normal;\r\n    white-space: nowrap;\r\n    direction: ltr;\r\n\r\n    /* Support for all WebKit browsers. */\r\n    -webkit-font-smoothing: antialiased;\r\n    /* Support for Safari and Chrome. */\r\n    text-rendering: optimizeLegibility;\r\n\r\n    /* Support for Firefox. */\r\n    -moz-osx-font-smoothing: grayscale;\r\n\r\n    /* Support for IE. */\r\n    font-feature-settings: 'liga';\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "input[type=text],\r\ninput[type=email],\r\ninput[type=password] {\r\n    width: 100%;\r\n    padding: 1rem 1.5rem;\r\n    background-color: rgba(255, 255, 255, 0.06);\r\n    border: 1px solid rgba(255, 255, 255, 0.2);\r\n    transition: 0.6s;\r\n    color: #fff;\r\n}\r\n\r\ninput[type=text]:focus,\r\ninput[type=email]:focus,\r\ninput[type=password]:focus {\r\n    background-color: rgba(255, 255, 255, 0.1);\r\n    border: 1px solid rgba(255, 255, 255, 0.2);\r\n    border-radius: 0;\r\n}\r\n\r\ninput[type=text]:hover,\r\ninput[type=email]:hover,\r\ninput[type=password]:hover {\r\n    background-color: hsla(0, 0%, 100%, 0.2);\r\n    box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n}\r\n\r\n/* Base for label styling */\r\n[type=\"checkbox\"]:not(:checked),\r\n[type=\"checkbox\"]:checked {\r\n    position: absolute;\r\n    left: 0;\r\n    opacity: 0.01;\r\n}\r\n\r\n[type=\"checkbox\"]:not(:checked)+label,\r\n[type=\"checkbox\"]:checked+label {\r\n    position: relative;\r\n    padding-left: 2rem;\r\n    cursor: pointer;\r\n}\r\n\r\n/* checkbox aspect */\r\n[type=\"checkbox\"]:not(:checked)+label:before,\r\n[type=\"checkbox\"]:checked+label:before {\r\n    content: '';\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 1.4em;\r\n    height: 1.4em;\r\n    background: rgba(255, 255, 255, 0.06); \r\n    border: 1px solid rgba(255, 255, 255, 0.2);\r\n    transition: all .5s;\r\n}\r\n\r\n/* checked mark aspect */\r\n[type=\"checkbox\"]:not(:checked)+label:after,\r\n[type=\"checkbox\"]:checked+label:after {\r\n    content: '✕';\r\n    position: absolute;\r\n    top: .5em;\r\n    left: .12em;\r\n    font-size: 1.375em;\r\n    color: #1de9b6;\r\n    line-height: 0;\r\n    -webkit-transition: all .2s;\r\n    transition: all .2s;\r\n}\r\n\r\n/* checked mark aspect changes */\r\n[type=\"checkbox\"]:not(:checked)+label:after {\r\n    opacity: 0; \r\n    -webkit-transform: scale(0) rotate(45deg);\r\n    transform: scale(0) rotate(45deg);\r\n}\r\n\r\n[type=\"checkbox\"]:checked+label:after {\r\n    opacity: 1;\r\n    -webkit-transform: scale(1) rotate(0);\r\n    transform: scale(1) rotate(0);\r\n}\r\n\r\n/* Disabled checkbox */\r\n[type=\"checkbox\"]:disabled:not(:checked)+label:before,\r\n[type=\"checkbox\"]:disabled:checked+label:before {\r\n    box-shadow: none;\r\n    border-color: #bbb;\r\n    background-color: #e9e9e9;\r\n}\r\n\r\n[type=\"checkbox\"]:disabled:checked+label:after {\r\n    color: #777;\r\n}\r\n\r\n[type=\"checkbox\"]:disabled+label {\r\n    color: #aaa;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9847,13 +9959,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".particles-js-canvas-el{\r\n    pointer-events: none;\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: -1;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".material-icons {\r\n    font-family: 'Material Icons';\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-size: 24px;\r\n    /* Preferred icon size */\r\n    display: inline-block;\r\n    line-height: 1;\r\n    text-transform: none;\r\n    letter-spacing: normal;\r\n    word-wrap: normal;\r\n    white-space: nowrap;\r\n    direction: ltr;\r\n\r\n    /* Support for all WebKit browsers. */\r\n    -webkit-font-smoothing: antialiased;\r\n    /* Support for Safari and Chrome. */\r\n    text-rendering: optimizeLegibility;\r\n\r\n    /* Support for Firefox. */\r\n    -moz-osx-font-smoothing: grayscale;\r\n\r\n    /* Support for IE. */\r\n    font-feature-settings: 'liga';\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9867,14 +9980,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh2 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh3 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh4 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh5 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh6 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nbody {\r\n  font-family: \"Poppins\", sans-serif;\r\n}\r\nbutton {\r\n  font-family: \"Open Sans\", sans-serif;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  font-weight: 600;\r\n}\r\nfooter{\r\n    font-size: 12px;\r\n    font-weight: 200;\r\n    font-family: \"Poppins\", sans-serif;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".particles-js-canvas-el{\r\n    pointer-events: none;\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: -1;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9888,13 +10000,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".title-bar {\r\n\tdisplay: grid;\r\n\tgrid-template-columns: auto 1fr auto;\r\n\tgrid-template-rows: 1fr;\r\n\tgap: 0px 0px;\r\n\tgrid-template-areas: \"start middle end\";\r\n\tposition: sticky;\r\n\t/* position: relative; */\r\n\ttop: 0;\r\n\tcolor: #fff;\r\n\tbackground-color: rgba(255, 255, 255, 0.06);\r\n\tpadding: 1rem;\r\n\tbackdrop-filter: blur(2px); \r\n\twidth: 100%;\r\n}\r\n\r\n.start {\r\n\tgrid-area: start;\r\n}\r\n\r\n.end {\r\n\tgrid-area: end;\r\n}\r\n\r\n.middle {\r\n\tgrid-area: middle;\r\n}\r\n\r\n.title-bar h1 {\r\n\tfont-size: large;\r\n\tmargin: 0;\r\n\ttext-transform: capitalize;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh2 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh3 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh4 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh5 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh6 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nbody {\r\n  font-family: \"Poppins\", sans-serif;\r\n}\r\nbutton {\r\n  font-family: \"Open Sans\", sans-serif;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  font-weight: 600;\r\n}\r\nfooter{\r\n    font-size: 12px;\r\n    font-weight: 200;\r\n    font-family: \"Poppins\", sans-serif;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9908,7 +10021,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(320);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".title-bar {\r\n\tdisplay: grid;\r\n\tgrid-template-columns: auto 1fr auto;\r\n\tgrid-template-rows: 1fr;\r\n\tgap: 0px 0px;\r\n\tgrid-template-areas: \"start middle end\";\r\n\tposition: sticky;\r\n\t/* position: relative; */\r\n\ttop: 0;\r\n\tcolor: #fff;\r\n\tbackground-color: rgba(255, 255, 255, 0.06);\r\n\tpadding: 1rem;\r\n\tbackdrop-filter: blur(2px); \r\n\twidth: 100%;\r\n}\r\n\r\n.start {\r\n\tgrid-area: start;\r\n}\r\n\r\n.end {\r\n\tgrid-area: end;\r\n}\r\n\r\n.middle {\r\n\tgrid-area: middle;\r\n}\r\n\r\n.title-bar h1 {\r\n\tfont-size: large;\r\n\tmargin: 0;\r\n\ttext-transform: capitalize;\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 330 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".landing {\r\n    position: relative;\r\n    padding: 0.5rem;\r\n    display: grid;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 90vh;\r\n}\r\n\r\n#noProjects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n    text-align: center;\r\n    font-size: large;\r\n    display: inline-grid;\r\n    grid-auto-flow: row;\r\n    gap: 4px 8px;\r\n}\r\n\r\n#noProjects:not(:first-child) {\r\n    font-size: medium;\r\n}\r\n\r\n/* \r\n.fab {\r\n    position: absolute;\r\n    top:0;\r\n    left: 0;\r\n} */\r\n\r\n#projects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n}\r\n\r\n#loadingContainer {\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 180px;\r\n    height: 60px;\r\n    display: flex;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    border-left: solid 1px #aaa;\r\n    border-right: solid 1px #aaa;\r\n}\r\n\r\nspan {\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 20%;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border: solid 1px #1de9b6;\r\n    display: inline-block;\r\n    position: absolute;\r\n    transform: translateX(0px);\r\n    animation: 1s circleAnimation infinite ease-in-out;\r\n}\r\n\r\nspan:nth-child(1) {\r\n    left: -60px;\r\n}\r\n\r\nspan:nth-child(2) {\r\n    left: 0px;\r\n}\r\n\r\nspan:nth-child(3) {\r\n    left: 60px;\r\n}\r\n\r\nspan:nth-child(4) {\r\n    left: 120px;\r\n}\r\n\r\n@keyframes circleAnimation {\r\n    0% {\r\n        transform: translateX(0);\r\n    }\r\n\r\n    50% {\r\n        transform: translateX(35px);\r\n    }\r\n\r\n    100% {\r\n        transform: translateX(60px);\r\n    }\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 331 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(321);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
@@ -10019,7 +10172,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_ButtonHandlers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(310);
 /* harmony import */ var _js_ButtonHandlers__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_ButtonHandlers__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _js_hashListener_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(311);
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(317);
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(318);
 
 
 
@@ -10034,9 +10187,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(318);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(319);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(322);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(323);
 
             
 
