@@ -9461,7 +9461,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                return _context.abrupt("return", "\n<section id='container' class=\"landing\">\n    <div id=\"loadingContainer\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </div> \n    <section id='noProjects'>\n        <label class='leading'>Looks like you dont have any projects.</label>\n        <label>Maybe you should create one!</label>\n        <button id='newProject'>New Project</button>\n    </section>\n    <section id='projects'>\n        <button id='newProject' type=\"button\" class=\"fab extended\">\n            <i class=\"material-icons\">build</i>\n            <label>Build</label>\n        </button>\n    </section>\n</section> \n");
+                return _context.abrupt("return", "\n<section id='container' class=\"landing\">\n    <div id=\"loadingContainer\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </div> \n    <section id='noProjects'>\n        <label class='leading'>Looks like you dont have any projects.</label>\n        <label>Maybe you should create one!</label>\n        <button id='newProject'>New Project</button>\n    </section>\n    <section id='projects'>\n        <button id='newProject' type=\"button\" class=\"fab extended\">\n            <i class=\"material-icons\">build</i>\n            <label>Build</label>\n        </button>\n    </section>\n</section>  \n");
 
               case 1:
               case "end":
