@@ -48,8 +48,8 @@ export default class extends AbstractView {
     }
 
     //@html:start
-    async getHtml() {
-        return `
+async getHtml() {
+return `
 <section id='container' class="landing">
     <div id="loadingContainer">
         <span></span>
@@ -70,6 +70,6 @@ export default class extends AbstractView {
     </section>
 </section> 
 `;
-    }
-    //@html:end
+}
+//@html:end
 }
