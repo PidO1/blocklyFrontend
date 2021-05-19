@@ -1,5 +1,6 @@
 import SignUp from "./views/SignUp";
 import Login from "../pages/login/login";
+import Blockly from "../pages/blockly/view/blocklyView";
 import PostView from "./views/PostView";
 import About from "./views/About";
 import landing from "../pages/landing/landing";
@@ -10,6 +11,7 @@ const routes = [
   { hash: "#signup", view: SignUp },
   { hash: "#niks", view: PostView },
   { hash: "#login", view: Login },
+  { hash: "#blocks", view: Blockly },
 ];
 
 var match;

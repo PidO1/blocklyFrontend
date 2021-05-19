@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Blockly Demo: Resizable Blockly (Part 2)</title>
+    <script src="./js/blockly_compressed.js"></script>
+    <script src="./js/javascript_compressed.js"></script>
+    <script src="./js/blocks_compressed.js"></script>
+    <script src="./js/en.js"></script>
+    <link rel="stylesheet" href="blockly.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        h1 {
+            font-weight: normal;
+            font-size: 140%;
+        }
+        table {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+        #blocklyArea {
+            height: 99%;
+        }
+    </style>
+</head>
+<body>
+<h1><a href="../../pages/login/login.html">Back To Home</a> &gt;</h1>
+<p>
+    <button onclick="myUpdateFunction()">Generate Code</button>
+</p>
+<table>
+    <tr>
+        <td id="blocklyArea">
+        </td>
+    </tr>
+</table>
+<div id="blocklyDiv" style="position: absolute"></div>
+<div id="textarea"></div>
+
+<xml  id="toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="math_number">
+        <field name="NUM">123</field>
+    </block>
+    <block type="math_arithmetic"></block>
+    <block type="text"></block>
+    <block type="text_print"></block>
+</xml>
+
+<script>
+    var blocklyArea = document.getElementById('blocklyArea');
+    var blocklyDiv = document.getElementById('blocklyDiv');
+    var demoWorkspace = Blockly.inject(blocklyDiv,
+        {media: '../../media/',
+            toolbox: document.getElementById('toolbox')});
+    var onresize = function(e) {
+        // Compute the absolute coordinates and dimensions of blocklyArea.
+        var element = blocklyArea;
+        var x = 0;
+        var y = 0;
+        do {
+            x += element.offsetLeft;
+            y += element.offsetTop;
+            element = element.offsetParent;
+        } while (element);
+        // Position blocklyDiv over blocklyArea.
+        blocklyDiv.style.left = x + 'px';
+        blocklyDiv.style.top = y + 'px';
+        blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+        blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+        Blockly.svgResize(demoWorkspace);
+    };
+    window.addEventListener('resize', onresize, false);
+    onresize();
+    Blockly.svgResize(demoWorkspace);
+    function myUpdateFunction() {
+        var xml = Blockly.JavaScript.workspaceToCode(demoWorkspace);
+        document.getElementById('blocklyDiv').setAttribute("class", "flipper");
+        document.getElementById('textarea').setAttribute("class", "flipback");
+        document.getElementById('textarea').innerText = xml;
+    }
+
+</script>
+</body>
+</html>

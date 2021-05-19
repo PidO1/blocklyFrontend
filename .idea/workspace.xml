@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="196d6139-a0e3-4d1b-b693-b3ce81963394" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blockly/blockly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/blockly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sean/gulp_dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sbn77fTpLxrJd8Yl98iGqYDphK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Added semi-functional Blockly implementation with npm dependencies and packages installed">
+      <created>1621098117051</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621098117052</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="196d6139-a0e3-4d1b-b693-b3ce81963394" name="Default Changelist" comment="" />
+      <created>1621149987815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621149987815</updated>
+      <workItem from="1621149994726" duration="9149000" />
+      <workItem from="1621267957823" duration="5348000" />
+      <workItem from="1621354431002" duration="5044000" />
+    </task>
+    <task id="LOCAL-00002" summary="gulp file structure and slight fixes on blockly">
+      <created>1621159477400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621159477400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added semi-functional Blockly implementation with npm dependencies and packages installed" />
+    <MESSAGE value="gulp file structure and slight fixes on blockly" />
+    <option name="LAST_COMMIT_MESSAGE" value="gulp file structure and slight fixes on blockly" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="66" key="RollbackChangesDialog" timestamp="1621354749997">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1621354749997" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1621159483719">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1621159483719" />
+    <state x="399" y="152" key="git4idea.merge.GitPullDialog" timestamp="1621354761766">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="399" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1621354761766" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1621157159552">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1621157159552" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1621270740770">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1621270740770" />
+  </component>
+</project>
