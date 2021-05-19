@@ -2,12 +2,16 @@ import SignUp from "./views/SignUp";
 import Login from "../pages/login/login";
 import PostView from "./views/PostView";
 import About from "./views/About";
+import dashboard from "../pages/dashboard/dashboard";
+import users from "../pages/users/users";
 
 const routes = [
   { hash: "#", view: About },
   { hash: "#signup", view: SignUp },
   { hash: "#niks", view: PostView },
-  { hash: "#login", view: Login }
+  { hash: "#login", view: Login },
+  { hash: "#dashboard", view:dashboard },
+  { hash: "#users", view:users}
 ];
 
 var match;
