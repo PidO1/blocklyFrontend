@@ -1,4 +1,4 @@
-import AbstractView from "../../js/views/AbstractView";
+import AbstractView from "../../js/AbstractView";
 
 
 export default class extends AbstractView {

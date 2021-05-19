@@ -1,4 +1,4 @@
-import AbstractView from "../../../js/views/AbstractView";
+import AbstractView from "../../../js/AbstractView";
 import Blockly from '../js/blockly_compressed.js';
 import '../js/javascript_compressed.js';
 import '../js/blocks_compressed.js';
@@ -63,7 +63,7 @@ return `
 <xml  id="toolbox" style="display: none">
     <block type="controls_if"></block>
     <block type="logic_compare"></block>
-   <block type="controls_repeat_ext"></block>
+    <!-- <block type="controls_repeat_ext"></block> -->
     <block type="math_number">
         <field name="NUM">123</field>
     </block>

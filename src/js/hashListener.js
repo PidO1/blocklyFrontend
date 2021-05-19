@@ -1,15 +1,9 @@
-import SignUp from "./views/SignUp";
 import Login from "../pages/login/login";
 import Blockly from "../pages/blockly/view/blocklyView";
-import PostView from "./views/PostView";
-import About from "./views/About";
-import landing from "../pages/landing/landing";
+import Landing from "../pages/landing/landing";
 
 const routes = [
-  { hash: "", view: landing },
-  { hash: "#", view: About },
-  { hash: "#signup", view: SignUp },
-  { hash: "#niks", view: PostView },
+  { hash: "", view: Landing },
   { hash: "#login", view: Login },
   { hash: "#blocks", view: Blockly },
 ];
@@ -29,7 +23,7 @@ function hashLoad() {
   for (var i = 0; i < perfEntries.length; i++) {
     var p = perfEntries[i];
     console.log("type = " + p.type);
-    if (p.type == 'reload')
+    if (p.type == 'reload' || p.type == 'navigate')
       loadContent();
   }
 }

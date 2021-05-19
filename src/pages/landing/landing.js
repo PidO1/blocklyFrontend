@@ -1,4 +1,4 @@
-import AbstractView from "../../js/views/AbstractView";
+import AbstractView from "../../js/AbstractView";
 
 
 export default class extends AbstractView {
@@ -55,28 +55,28 @@ export default class extends AbstractView {
 async getHtml() {
 return `
 <section id='container' class="landing">
-    <div id="loadingContainer">
+    <div id="loadingContainer" role="progressbar" aria-readonly="true" aria-busy="true" aria-valuetext="Loading">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-    </div> 
+    </div>
     <section id='noProjects'>
         <label class='leading'>Looks like you dont have any projects.</label>
         <label>Maybe you should create one!</label>
         <button id='newProject'>New Project</button>
     </section>
-    <section id='projects'> 
+    <section id='projects'>
         <!-- <button id='newProject' type="button" class="fab extended">
             <i class="material-icons">build</i>
             <label>Build</label> 
         </button> -->
-        <ul id='projects' class="jetBrains"> 
-            <li id='newProject'> 
+        <ul id='projects' class="jetBrains">
+            <li id='newProject'>
                 <button>
                     <i class="material-icons">add</i>
                     New Project
-                </button> 
+                </button>
             </li>
             <li id='project1'>
                 <button class="proj">
