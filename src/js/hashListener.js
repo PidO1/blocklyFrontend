@@ -31,7 +31,7 @@ function hashLoad() {
   for (var i = 0; i < perfEntries.length; i++) {
     var p = perfEntries[i];
     console.log("type = " + p.type);
-    if (p.type == 'reload')
+    if (p.type == 'reload' || p.type == 'navigation' || p.type == 'back_forward')
       loadContent();
   }
 }
