@@ -8637,7 +8637,7 @@ module.exports = function (it, key) {
 particlesJS('particles-js', {
   "particles": {
     "number": {
-      "value": 40,
+      "value": 30,
       "density": {
         "enable": true,
         "value_area": 631.3181133058181
@@ -8690,12 +8690,12 @@ particlesJS('particles-js', {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 4,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
-      "bounce": false,
+      "bounce": true,
       "attract": {
         "enable": false,
         "rotateX": 600,
@@ -8823,7 +8823,7 @@ function hashLoad() {
   for (var i = 0; i < perfEntries.length; i++) {
     var p = perfEntries[i];
     console.log("type = " + p.type);
-    if (p.type == 'reload' || p.type == 'navigate') loadContent();
+    if (p.type == 'reload' || p.type == 'navigate' || p.type == 'back_forward') loadContent();
   }
 } //tried using a named function, but wouldn't trigger 
 
@@ -12868,6 +12868,8 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
     _defineProperty(_assertThisInitialized(_this), "noProjects", undefined);
 
+    _defineProperty(_assertThisInitialized(_this), "noProjectsSignIn", undefined);
+
     _defineProperty(_assertThisInitialized(_this), "projects", undefined);
 
     _defineProperty(_assertThisInitialized(_this), "newProject", undefined);
@@ -12884,8 +12886,8 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
       this.loader = document.getElementById('loadingContainer');
       this.noProjects = document.getElementById('noProjects');
+      this.noProjectsSignIn = document.getElementById('newProject_signIn');
       this.projects = document.getElementById('projects');
-      this.newProject = document.getElementById('newProject');
       this.removeNoProjects(); // this.removeLoader();
 
       this.removeProjects(); // basically a timeout
@@ -12894,7 +12896,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
         _this2.removeLoader();
 
         _this2.addNoProjects();
-      }, 10000);
+      }, 100);
     }
   }, {
     key: "removeLoader",
@@ -12915,6 +12917,11 @@ var _default = /*#__PURE__*/function (_AbstractView) {
     key: "addProjects",
     value: function addProjects() {
       document.getElementById('container').appendChild(this.projects);
+      this.newProject = document.getElementById('newProject');
+      this.newProject.addEventListener("click", function () {
+        //TODO create new project
+        window.location.href = "#blocks";
+      });
     }
   }, {
     key: "removeNoProjects",
@@ -12925,6 +12932,20 @@ var _default = /*#__PURE__*/function (_AbstractView) {
     key: "addNoProjects",
     value: function addNoProjects() {
       document.getElementById('container').appendChild(this.noProjects);
+      this.newProject = document.getElementById('newProject');
+      this.newProject.addEventListener("click", function () {
+        window.location.href = "#blocks";
+      });
+    }
+  }, {
+    key: "removeNoProjectsSignIn",
+    value: function removeNoProjectsSignIn() {
+      this.noProjectsSignIn.remove();
+    }
+  }, {
+    key: "addNoProjectsSignIn",
+    value: function addNoProjectsSignIn() {
+      this.noProjects.appendChild(this.noProjectsSignIn);
     } //@html:start
 
   }, {
@@ -12935,7 +12956,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                return _context.abrupt("return", "\n<section id='container' class=\"landing\">\n    <div id=\"loadingContainer\" role=\"progressbar\" aria-readonly=\"true\" aria-busy=\"true\" aria-valuetext=\"Loading\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </div>\n    <section id='noProjects'>\n        <label class='leading'>Looks like you dont have any projects.</label>\n        <label>Maybe you should create one!</label>\n        <button id='newProject'>New Project</button>\n    </section>\n    <section id='projects'>\n        <!-- <button id='newProject' type=\"button\" class=\"fab extended\">\n            <i class=\"material-icons\">build</i>\n            <label>Build</label> \n        </button> -->\n        <ul id='projects' class=\"jetBrains\">\n            <li id='newProject'>\n                <button>\n                    <i class=\"material-icons\">add</i>\n                    New Project\n                </button>\n            </li>\n            <li id='project1'>\n                <button class=\"proj\">\n                    <i class=\"material-icons\">code</i>\n                    Test Project 1\n                </button>\n            </li>\n        </ul>\n    </section>\n</section>\n");
+                return _context.abrupt("return", "\n<section id='container' class=\"landing\">\n    <div id=\"loadingContainer\" role=\"progressbar\" aria-readonly=\"true\" aria-busy=\"true\" aria-valuetext=\"Loading\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </div>\n    <section id='noProjects'>\n        <label class='leading'>Looks like you dont have any projects.</label>\n        <label>Maybe you should create one!</label>\n        <button id='newProject'>\n            New Project \n            <span id='newProject_signIn'> and Sign in</span> \n        </button> \n    </section> \n    <section id='projects'>\n        <!-- <button id='newProject' type=\"button\" class=\"fab extended\">\n            <i class=\"material-icons\">build</i>\n            <label>Build</label> \n        </button> -->\n        <ul id='projects' class=\"jetBrains\">\n            <li>\n                <button id='newProject'>\n                    <i class=\"material-icons\">add</i>\n                    New Project\n                </button>\n            </li>\n            <li id='project1'>\n                <button class=\"proj\">\n                    <i class=\"material-icons\">code</i>\n                    Test Project 1\n                </button>\n            </li>\n        </ul>\n    </section>\n</section>\n");
 
               case 1:
               case "end":
@@ -13567,7 +13588,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".landing {\r\n    position: relative;\r\n    padding: 0.5rem;\r\n    display: grid;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 90vh;\r\n    margin-bottom: 10vh;\r\n}\r\n\r\n#noProjects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n    text-align: center;\r\n    font-size: large;\r\n    display: inline-grid;\r\n    grid-auto-flow: row;\r\n    gap: 4px 8px;\r\n}\r\n\r\n#noProjects:not(:first-child) {\r\n    font-size: medium;\r\n}\r\n\r\n/* #projects { */\r\n    /* display: none;\r\n    max-height: 0; \r\n    overflow: hidden; */\r\n/* } */\r\n\r\n#projects ul {\r\n    display: flex;\r\n    gap: 16px;\r\n    justify-content: center;\r\n    align-items: flex-end;\r\n    flex-wrap: wrap;\r\n    padding: 0.5rem;\r\n    margin: 0;\r\n}\r\n\r\n#projects ul li {\r\n    list-style-type: none;\r\n}\r\n\r\n#projects ul li .material-icons{\r\n    font-size: 42px;\r\n}\r\n\r\n#projects ul li button {\r\n    width: 30vw;\r\n    height: 30vw;\r\n    max-height: 30vh;\r\n    max-width: 30vh;\r\n    padding-top: 100%;\r\n    position: relative;\r\n    color: #fff;\r\n    background-color: hsla(0, 0%, 100%, 0.06);\r\n    backdrop-filter: blur(2px);\r\n    padding: 1rem;\r\n    border-radius: 0.5rem;\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n    align-items: center;\r\n    justify-items: center;\r\n    border: solid 2px transparent;\r\n}\r\n\r\n#projects ul li button.proj {\r\n    border: solid 2px hsla(0, 0%, 100%, 0.2);\r\n}\r\n\r\n#projects ul li button:hover {\r\n    border: solid 2px #1de9b6;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border-radius: 1rem;\r\n}\r\n\r\n#projects ul li button:active {\r\n    border: solid 2px hsla(0, 0%, 100%, 0.8);\r\n    background-color: hsla(0, 0%, 100%, 0.3);\r\n}\r\n\r\n#loadingContainer {\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 11.25rem;\r\n    height: 3.75rem;\r\n    display: flex;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    border-left: solid 0.0625rem #aaa;\r\n    border-right: solid 0.0625rem #aaa;\r\n}\r\n\r\nspan {\r\n    width: 2.5rem;\r\n    height: 2.5rem;\r\n    border-radius: 20%;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border: solid 1px #1de9b6;\r\n    display: inline-block;\r\n    position: absolute;\r\n    transform: translateX(0rem);\r\n    animation: 1s loaderAnimation infinite ease-in-out;\r\n}\r\n\r\nspan:nth-child(1) {\r\n    left: -3.75rem;\r\n}\r\n\r\nspan:nth-child(2) {\r\n    left: 0rem;\r\n}\r\n\r\nspan:nth-child(3) {\r\n    left: 3.75rem;\r\n}\r\n\r\nspan:nth-child(4) {\r\n    left: 7.5rem;\r\n}\r\n\r\n@keyframes loaderAnimation {\r\n    0% {\r\n        transform: translateX(0);\r\n        border: solid 1px #1de9b6;\r\n    }\r\n\r\n    50% {\r\n        transform: translateX(2.1875rem);\r\n        border: solid 1px hsla(0, 0%, 100%, 0.2);\r\n    }\r\n\r\n    100% {\r\n        transform: translateX(3.75rem);\r\n        border: solid 1px #1de9b6;\r\n    }\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".landing {\r\n    position: relative;\r\n    padding: 0.5rem;\r\n    display: grid;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 90vh;\r\n    margin-bottom: 10vh;\r\n}\r\n\r\n#noProjects {\r\n    /* display: none;\r\n    max-height: 0;\r\n    overflow: hidden; */\r\n    text-align: center;\r\n    font-size: large;\r\n    display: inline-grid;\r\n    grid-auto-flow: row;\r\n    gap: 4px 8px;\r\n}\r\n\r\n#noProjects:not(:first-child) {\r\n    font-size: medium;\r\n}\r\n\r\n/* #projects { */\r\n    /* display: none;\r\n    max-height: 0; \r\n    overflow: hidden; */\r\n/* } */\r\n\r\n#projects ul {\r\n    display: flex;\r\n    gap: 16px;\r\n    justify-content: center;\r\n    align-items: flex-end;\r\n    flex-wrap: wrap;\r\n    padding: 0.5rem;\r\n    margin: 0;\r\n}\r\n\r\n#projects ul li {\r\n    list-style-type: none;\r\n}\r\n\r\n#projects ul li .material-icons{\r\n    font-size: 42px;\r\n}\r\n\r\n#projects ul li button {\r\n    width: 30vw;\r\n    height: 30vw;\r\n    max-height: 30vh;\r\n    max-width: 30vh;\r\n    padding-top: 100%;\r\n    position: relative;\r\n    color: #fff;\r\n    background-color: hsla(0, 0%, 100%, 0.06);\r\n    backdrop-filter: blur(2px);\r\n    padding: 1rem;\r\n    border-radius: 0.5rem;\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n    align-items: center;\r\n    justify-items: center;\r\n    border: solid 2px transparent;\r\n}\r\n\r\n#projects ul li button.proj {\r\n    border: solid 2px hsla(0, 0%, 100%, 0.2);\r\n}\r\n\r\n#projects ul li button:hover {\r\n    border: solid 2px #1de9b6;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border-radius: 1rem;\r\n}\r\n\r\n#projects ul li button:active {\r\n    border: solid 2px hsla(0, 0%, 100%, 0.8);\r\n    background-color: hsla(0, 0%, 100%, 0.3);\r\n}\r\n\r\n#newProject {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n}\r\n\r\n#newProject:hover span {\r\n    transform: translateX(0);\r\n    opacity: 1;\r\n    max-width: 10vw;\r\n}\r\n\r\n#newProject span {\r\n    width: auto;\r\n    max-width: 0;\r\n    display: inline-block;\r\n    transform: translateX(300px);\r\n    font-weight: normal;\r\n    opacity: 0;\r\n    transition: opacity 0.1s 0.3s,\r\n    transform 0.2s 0.3s,\r\n    max-width 0s 0.3s;\r\n}\r\n\r\n#loadingContainer {\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 11.25rem;\r\n    height: 3.75rem;\r\n    display: flex;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    border-left: solid 0.0625rem #aaa;\r\n    border-right: solid 0.0625rem #aaa;\r\n}\r\n\r\n#loadingContainer span {\r\n    width: 2.5rem;\r\n    height: 2.5rem;\r\n    border-radius: 20%;\r\n    background-color: hsla(0, 0%, 100%, 0.1);\r\n    border: solid 1px #1de9b6;\r\n    display: inline-block;\r\n    position: absolute;\r\n    transform: translateX(0rem);\r\n    animation: 1s loaderAnimation infinite ease-in-out;\r\n}\r\n\r\n#loadingContainer span:nth-child(1) {\r\n    left: -3.75rem;\r\n}\r\n\r\n#loadingContainer span:nth-child(2) {\r\n    left: 0rem;\r\n}\r\n\r\n#loadingContainer span:nth-child(3) {\r\n    left: 3.75rem;\r\n}\r\n\r\n#loadingContainer span:nth-child(4) {\r\n    left: 7.5rem;\r\n}\r\n\r\n@keyframes loaderAnimation {\r\n    0% {\r\n        transform: translateX(0);\r\n        border: solid 1px #1de9b6;\r\n    }\r\n\r\n    50% {\r\n        transform: translateX(2.1875rem);\r\n        border: solid 1px hsla(0, 0%, 100%, 0.2);\r\n    }\r\n\r\n    100% {\r\n        transform: translateX(3.75rem);\r\n        border: solid 1px #1de9b6;\r\n    }\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13721,7 +13742,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_ParticlesConfig__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_ParticlesConfig__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _js_ButtonHandlers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(309);
 /* harmony import */ var _js_ButtonHandlers__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_ButtonHandlers__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _js_hashListener_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(310);
+/* harmony import */ var _js_router_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(310);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(318);
 
 

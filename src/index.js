@@ -1,5 +1,5 @@
 import './js/ParticlesConfig'
 import './js/ButtonHandlers'
-import './js/hashListener.js'
+import './js/router.js'
 import './styles/main.css'
 //import './pages/blockly/js/en.js'

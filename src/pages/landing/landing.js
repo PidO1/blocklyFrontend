@@ -4,6 +4,7 @@ import AbstractView from "../../js/AbstractView";
 export default class extends AbstractView {
     loader = undefined;
     noProjects = undefined;
+    noProjectsSignIn = undefined;
     projects = undefined;
     newProject = undefined;
     loop = 0;
@@ -15,8 +16,8 @@ export default class extends AbstractView {
     afterInit() {
         this.loader = document.getElementById('loadingContainer');
         this.noProjects = document.getElementById('noProjects');
+        this.noProjectsSignIn = document.getElementById('newProject_signIn');
         this.projects = document.getElementById('projects');
-        this.newProject = document.getElementById('newProject');
         this.removeNoProjects();
         // this.removeLoader();
         this.removeProjects();
@@ -24,7 +25,7 @@ export default class extends AbstractView {
         setTimeout(() => {
             this.removeLoader();
             this.addNoProjects();
-        }, 10000);
+        }, 100);
     }
 
     removeLoader() {
@@ -41,6 +42,11 @@ export default class extends AbstractView {
 
     addProjects() {
         document.getElementById('container').appendChild(this.projects);
+        this.newProject = document.getElementById('newProject');
+        this.newProject.addEventListener("click", () => {
+            //TODO create new project
+            window.location.href = "#blocks";
+        });
     }
 
     removeNoProjects() {
@@ -49,6 +55,18 @@ export default class extends AbstractView {
 
     addNoProjects() {
         document.getElementById('container').appendChild(this.noProjects);
+        this.newProject = document.getElementById('newProject');
+        this.newProject.addEventListener("click", () => {
+            window.location.href = "#blocks";
+        });
+    }
+
+    removeNoProjectsSignIn() {
+        this.noProjectsSignIn.remove();
+    }
+
+    addNoProjectsSignIn() {
+        this.noProjects.appendChild(this.noProjectsSignIn);
     }
 
     //@html:start
@@ -64,16 +82,19 @@ return `
     <section id='noProjects'>
         <label class='leading'>Looks like you dont have any projects.</label>
         <label>Maybe you should create one!</label>
-        <button id='newProject'>New Project</button>
-    </section>
+        <button id='newProject'>
+            New Project 
+            <span id='newProject_signIn'> and Sign in</span> 
+        </button> 
+    </section> 
     <section id='projects'>
         <!-- <button id='newProject' type="button" class="fab extended">
             <i class="material-icons">build</i>
             <label>Build</label> 
         </button> -->
         <ul id='projects' class="jetBrains">
-            <li id='newProject'>
-                <button>
+            <li>
+                <button id='newProject'>
                     <i class="material-icons">add</i>
                     New Project
                 </button>
