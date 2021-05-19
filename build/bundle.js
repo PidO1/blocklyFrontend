@@ -8781,8 +8781,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 var routes = [{
+  hash: "",
+  view: _pages_landing_landing__WEBPACK_IMPORTED_MODULE_4__.default
+}, {
   hash: "#",
   view: _views_About__WEBPACK_IMPORTED_MODULE_3__.default
 }, {
@@ -9996,7 +9998,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_buttons_css__WEBPACK_IMPORTED_MODULE_1__.default);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_styles_input_css__WEBPACK_IMPORTED_MODULE_2__.default);
@@ -10029,7 +10030,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "button {\r\n  border: none;\r\n  border-radius: 0.25rem;\r\n  background-color: #454545;\r\n  color: rgba(255, 255, 255, 0.8);\r\n  cursor: pointer;\r\n  padding: 0rem 1rem;\r\n  min-height: 2.25rem;\r\n  min-width: 4rem;\r\n  transition: 0.6s;\r\n}\r\n\r\nbutton:hover {\r\n  background-color: hsla(0, 0%, 100%, 0.2);\r\n  box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n  border-radius: 0.5rem;\r\n}\r\n\r\nbutton:active {\r\n  background-color: hsla(0, 0%, 100%, 0.3);\r\n  box-shadow: none;\r\n}\r\n\r\nbutton .button-icon {\r\n  padding-left: 0.5rem;\r\n  width: 1.5rem;\r\n  height: 1.5rem;\r\n}\r\n\r\nbutton.icon-button {\r\n  padding-left: 0.05rem;\r\n  padding-right: 1rem;\r\n}\r\nbutton.liquid {\r\n  \r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "button {\r\n  border: none;\r\n  border-radius: 0.25rem;\r\n  background-color: #454545;\r\n  color: rgba(255, 255, 255, 0.8);\r\n  cursor: pointer;\r\n  padding: 0rem 1rem;\r\n  min-height: 2.25rem;\r\n  min-width: 4rem;\r\n  transition: 0.6s;\r\n  border: solid 1px transparent;\r\n}\r\n\r\nbutton:hover {\r\n  background-color: hsla(0, 0%, 100%, 0.2);\r\n  box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n  border-radius: 0.5rem;\r\n  border: solid 1px #1de9b6;\r\n}\r\n\r\nbutton:active {\r\n  background-color: hsla(0, 0%, 100%, 0.3);\r\n  box-shadow: none;\r\n}\r\n\r\nbutton .button-icon {\r\n  padding-left: 0.5rem;\r\n  width: 1.5rem;\r\n  height: 1.5rem;\r\n}\r\n\r\nbutton.icon-button {\r\n  padding-left: 0.05rem;\r\n  padding-right: 1rem;\r\n}\r\n\r\nbutton.fab{\r\n  color: #1de9b6;\r\n  min-height: 3.5rem;\r\n  max-height: 3.5rem;\r\n  min-width: 3.5rem;\r\n  max-width: 3.5rem;\r\n  font-size: 1.5rem;\r\n  padding: 0;\r\n  border-radius: 3.5rem;\r\n  display: grid;\r\n  grid-gap: 1rem;\r\n  padding: 0 1rem;\r\n  grid-template-columns: auto auto;\r\n  align-items: center;\r\n  overflow: hidden;\r\n  transition: all 0.2s;\r\n}\r\n\r\nbutton.fab label {\r\n  font-size: 16px;\r\n}\r\n\r\nbutton.fab:hover {\r\n  background-color: hsla(165, 82%, 51%, 0.2);\r\n  box-shadow: -0.0625rem 0.5rem 1.5rem 0.5rem hsla(0, 0%, 0%, 0.1);\r\n  border-radius: 3rem;\r\n}\r\n\r\nbutton.fab:active {\r\n  background-color: hsla(165, 82%, 51%, 0.3);\r\n}\r\n\r\nbutton.fab.mini {\r\n  min-height: 2.5rem;\r\n  min-width: 2.5rem;\r\n  font-size: 1.5rem;\r\n  padding: 0;\r\n  border-radius: 50%;\r\n}\r\n\r\nbutton.fab.extended{\r\n  border-radius: 3.5rem;\r\n  display: grid;\r\n  grid-gap: 0.75rem;\r\n  padding: 0 0.75rem ;\r\n  max-width: max-content;\r\n  grid-template-columns: auto auto;\r\n  align-items: center;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10110,8 +10111,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh2 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh3 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh4 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh5 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nh6 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\nbody {\r\n  font-family: \"Poppins\", sans-serif;\r\n}\r\nbutton {\r\n  font-family: \"Open Sans\", sans-serif;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  font-weight: 600;\r\n}\r\nfooter{\r\n    font-size: 12px;\r\n    font-weight: 200;\r\n    font-family: \"Poppins\", sans-serif;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\n\r\nh2 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\n\r\nh3 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\n\r\nh4 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\n\r\nh5 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\n\r\nh6 {\r\n  font-family: \"Lato\", sans-serif;\r\n}\r\n\r\nbody {\r\n  font-family: \"Poppins\", sans-serif;\r\n}\r\n\r\nbutton {\r\n  font-family: 'JetBrains Mono',\r\n    monospace;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  font-weight: 600;\r\n}\r\n\r\nfooter {\r\n  font-size: 12px;\r\n  font-weight: 200;\r\n  font-family: \"Poppins\", sans-serif;\r\n}\r\n\r\n.lato {\r\n  font-family: \"Lato\",\r\n    sans-serif;\r\n}\r\n\r\n.poppins {\r\n  font-family: \"Poppins\",\r\n    sans-serif;\r\n}\r\n\r\n.jetBrains {\r\n  font-family: 'JetBrains Mono', monospace;\r\n  font-variant-ligatures: normal;\r\n}\r\n\r\n.openSans {\r\n  font-family: \"Open Sans\",\r\n    sans-serif;\r\n}\r\n\r\ncode {\r\n  font-family: 'JetBrains Mono',\r\n  monospace;\r\n  font-variant-ligatures: normal;\r\n  font-size: 13px;\r\n  \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

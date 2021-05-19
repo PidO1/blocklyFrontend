@@ -4,8 +4,10 @@ import PostView from "./views/PostView";
 import About from "./views/About";
 import dashboard from "../pages/dashboard/dashboard";
 import users from "../pages/users/users";
+import landing from "../pages/landing/landing";
 
 const routes = [
+  { hash: "", view: landing },
   { hash: "#", view: About },
   { hash: "#signup", view: SignUp },
   { hash: "#niks", view: PostView },
