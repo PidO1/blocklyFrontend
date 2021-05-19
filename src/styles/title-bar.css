@@ -12,6 +12,7 @@
 	padding: 1rem;
 	backdrop-filter: blur(2px); 
 	width: 100%;
+	z-index: 1;
 }
 
 .start {

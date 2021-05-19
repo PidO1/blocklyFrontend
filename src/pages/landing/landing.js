@@ -66,7 +66,7 @@ return `
         <label>Maybe you should create one!</label>
         <button id='newProject'>New Project</button>
     </section>
-    <section id='projects'>
+    <section id='projects'> 
         <!-- <button id='newProject' type="button" class="fab extended">
             <i class="material-icons">build</i>
             <label>Build</label> 
@@ -82,12 +82,6 @@ return `
                 <button class="proj">
                     <i class="material-icons">code</i>
                     Test Project 1
-                </button>
-            </li>
-            <li id='project2'>
-                <button class="proj">
-                    <i class="material-icons">code</i>
-                    Test Project 2
                 </button>
             </li>
         </ul>
