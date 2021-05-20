@@ -9431,9 +9431,13 @@ var _default = /*#__PURE__*/function (_AbstractView) {
   var _super = _createSuper(_default);
 
   function _default(params) {
+    var _this;
+
     _classCallCheck(this, _default);
 
-    return _super.call(this, params);
+    _this = _super.call(this, params);
+    document.body.innerHTML = '<script src="https://unpkg.com/blockly/blockly.min.js"></script>' + document.body.innerHTML;
+    return _this;
   }
 
   _createClass(_default, [{
@@ -9448,7 +9452,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                return _context.abrupt("return", "\n<div id=\"app\"></div> \n<script src=\"https://unpkg.com/blockly/blockly.min.js\"></script>\n<div id=\"blocklyDiv\" style=\"height: 100vh; width: 100vw;\"></div>\n<xml id=\"toolbox\" style=\"display: none;\">\n  <block type=\"controls_if\"></block>\n  <block type=\"controls_repeat_ext\"></block>\n  <block type=\"logic_compare\"></block>\n  <block type=\"math_number\"></block>\n  <block type=\"math_arithmetic\"></block>\n  <block type=\"text\"></block>\n  <block type=\"text_print\"></block>\n  <block type=\"logic_boolean\"></block>\n  <block type=\"controls_ifelse\"></block>\n  <block type=\"logic_compare\"></block>\n  <block type=\"logic_operation\"></block>\n  <block type=\"logic_negate\"></block>\n  <block type=\"logic_null\"></block>\n  <block type=\"logic_ternary\"></block>\n  <block type=\"controls_repeat\"></block>\n  <block type=\"controls_whileUntil\"></block>\n  <block type=\"controls_for\"></block>\n  <block type=\"controls_forEach\"></block>\n  <block type=\"controls_flow_statements\"></block>\n  <block type=\"variables_get\"></block>\n  <block type=\"lists_create_empty\"></block>\n  <block type=\"lists_repeat\"></block>\n  <block type=\"lists_reverse\"></block>\n  <block type=\"lists_isEmpty\"></block>\n  <block type=\"lists_length\"></block>\n  <block type=\"variables_get_dynamic\"></block>\n  <block type=\"variables_set_dynamic\"></block>\n  <block type=\"text_multiline\"></block>\n  <block type=\"text_join\"></block>\n  <block type=\"text_create_join_container\"></block>\n  <block type=\"text_create_join_item\"></block>\n  <block type=\"text_append\"></block>\n  <block type=\"text_isEmpty\"></block>\n  <block type=\"text_indexOf\"></block>\n  <block type=\"text_charAt\"></block>\n  <block type=\"colour_picker\"></block>\n  <block type=\"colour_random\"></block>\n  <block type=\"colour_rgb\"></block>\n  <block type=\"colour_blend\"></block>\n  <block type=\"math_number\"></block>\n  <block type=\"math_arithmetic\"></block>\n  <block type=\"math_single\"></block>\n  <block type=\"math_trig\"></block>\n  <block type=\"math_constant\"></block>\n  <block type=\"math_number_property\"></block>\n  <block type=\"math_change\"></block>\n  <block type=\"math_round\"></block>\n  <block type=\"math_on_list\"></block>\n  <block type=\"math_constrain\"></block>\n  <block type=\"math_random_int\"></block>\n  <block type=\"math_random_float\"></block>\n  <block type=\"math_atan2\"></block> \n</xml>\n<script>\n  var workspace = Blockly.inject(\"blocklyDiv\", {\n    toolbox: document.getElementById(\"toolbox\")\n  });\n</script>\n");
+                return _context.abrupt("return", "\n<div style=\"display: grid; grid-template-columns: 1fr 1fr auto; height: 90vh; width: 90vw;\">\n  <div id=\"blocklyDiv\"></div>\n  <pre>\n      <code id='textarea'></code> \n    </pre>\n  <xml id=\"toolbox\" style=\"display: none;\">  \n    <block type=\"controls_if\"></block> \n    <block type=\"controls_repeat_ext\"></block>\n    <block type=\"logic_compare\"></block>\n    <block type=\"math_number\"></block>\n    <block type=\"math_arithmetic\"></block> \n    <block type=\"text\"></block>\n    <block type=\"text_print\"></block>\n    <block type=\"logic_boolean\"></block> \n    <block type=\"controls_ifelse\"></block>\n    <block type=\"logic_compare\"></block>\n    <block type=\"logic_operation\"></block>\n    <block type=\"logic_negate\"></block>\n    <block type=\"logic_null\"></block>\n    <block type=\"logic_ternary\"></block>\n    <!-- <block type=\"controls_repeat\"></block>\n        <block type=\"controls_whileUntil\"></block>\n        <block type=\"controls_for\"></block>\n        <block type=\"controls_forEach\"></block>\n        <block type=\"controls_flow_statements\"></block> -->\n    <block type=\"variables_get\"></block>\n    <block type=\"lists_create_empty\"></block>\n    <block type=\"lists_repeat\"></block>\n    <block type=\"lists_reverse\"></block>\n    <block type=\"lists_isEmpty\"></block>\n    <block type=\"lists_length\"></block>\n    <!-- <block type=\"variables_get_dynamic\"></block>\n        <block type=\"variables_set_dynamic\"></block> -->\n    <block type=\"text_multiline\"></block>\n    <block type=\"text_join\"></block>\n    <block type=\"text_create_join_container\"></block>\n    <block type=\"text_create_join_item\"></block>\n    <block type=\"text_append\"></block>\n    <block type=\"text_isEmpty\"></block>\n    <block type=\"text_indexOf\"></block>\n    <block type=\"text_charAt\"></block>\n    <block type=\"colour_picker\"></block>\n    <block type=\"colour_random\"></block>\n    <block type=\"colour_rgb\"></block>\n    <block type=\"colour_blend\"></block>\n    <block type=\"math_number\"></block>\n    <block type=\"math_arithmetic\"></block>\n    <block type=\"math_single\"></block>\n    <block type=\"math_trig\"></block>\n    <block type=\"math_constant\"></block>\n    <block type=\"math_number_property\"></block>\n    <block type=\"math_change\"></block>\n    <block type=\"math_round\"></block>\n    <block type=\"math_on_list\"></block>\n    <block type=\"math_constrain\"></block>\n    <block type=\"math_random_int\"></block>\n    <block type=\"math_random_float\"></block>\n    <block type=\"math_atan2\"></block>\n  </xml>\n</div>\n\n<script>\n  var workspace = Blockly.inject(\"blocklyDiv\", {\n    toolbox: document.getElementById(\"toolbox\")\n  });\n  var code = Blockly.JavaScript.workspaceToCode(workspace);\n  workspace.addChangeListener(() => {\n    var code = Blockly.JavaScript.workspaceToCode(workspace);\n    console.log('generate', code);\n    document.getElementById('textarea').innerHTML = code;\n  });\n</script>\n");
 
               case 1:
               case "end":
@@ -10182,7 +10186,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- //import './pages/blockly/js/en.js'
+ // import './pages/sample/blockly.min.js'
+// import './pages/sample/blockly_compressed'
+// import './pages/sample/javascript_compressed'
+//import './pages/blockly/js/en.js'
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.

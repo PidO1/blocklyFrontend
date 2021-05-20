@@ -8,4 +8,4 @@ handlers:
     upload: build/.*\.(json|ico|js)$
   - url: .*
     static_files: build/index.html
-    upload: build/.*\.(html)$
+    upload: build/index.html
