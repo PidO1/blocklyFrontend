@@ -1,5 +1,5 @@
 <table id="userTable">
-    <thead>
+    <thead class="header" id="table-header">
         <tr>
             <th>User ID</th>
             <th>Name</th>
@@ -102,3 +102,20 @@
 
     </tbody>
 </table>
+<script>
+    window.onscroll = function () {stickHeader()};
+    var header = document.getElementById('table-header');
+    var sticky = header.offsetTop;
+
+    function stickHeader()
+    {
+        if (window.pageYOffset > sticky)
+        {
+            header.classList.add("sticky");
+        }
+        else
+        {
+            header.classList.remove("sticky");
+        }
+    }
+</script>

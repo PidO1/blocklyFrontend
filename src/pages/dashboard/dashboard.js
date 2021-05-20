@@ -60,31 +60,34 @@ return `
         <li>
             <a href="#users">
                 <button id='users' type="button">
-                    <i class="material-icons">add</i>
+                    <i class="material-icons">person_search</i>
                     Users
                 </button>
             </a>
         </li>
-        <!-- <li>
-            <button>
-                <i class="material-icons">add</i>
-                Users
-            </button>
+        <li>
+            <a href="#user_workspace">
+                <button id="projects" type="button">
+                    <i class="material-icons">task</i>
+                    Tasks
+                </button>
+            </a>
         </li>
         <li>
-            <button>
-                <i class="material-icons">add</i>
-                Users
+            <button class="open-button" id="add-admin" onclick="window.location.href='#add_admin'">
+                <i class="material-icons">add_moderator</i>
+                Add New Admin
             </button>
         </li>
-        <li>
-            <button>
-                <i class="material-icons">add</i>
-                Users
-            </button>
-        </li> -->
     </ul>
+    <p class="res"></p>
 </section>
+<script>
+    function openForm() {
+        document.getElementById('add-admin-form').style.display = "block";
+    }
+</script>
+
 `;
 }
 //@html:end

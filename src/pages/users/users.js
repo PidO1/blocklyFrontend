@@ -16,7 +16,7 @@ export default class extends AbstractView
 async getHtml() {
 return `
 <table id="userTable">
-    <thead>
+    <thead class="header" id="table-header">
         <tr>
             <th>User ID</th>
             <th>Name</th>

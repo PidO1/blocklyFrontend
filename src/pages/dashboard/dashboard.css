@@ -253,11 +253,33 @@ body,
 }
 
 #dashboard ul li button:hover {
-    border: solid 1px #1de9b6;
+    border: solid 1px #161e45;
     background-color: hsla(0, 0%, 100%, 0.1);
 }
 
 #dashboard ul li button:active {
     border: solid 2px hsla(0, 0%, 100%, 0.8);
     background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+#add-admin-form
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    gap: 1rem 1rem;
+    margin-left: 35vw;
+    grid-template-areas:
+        ". . ."
+        "start middle end"
+        ". . ."
+}
+
+form
+{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem 1rem;
 }

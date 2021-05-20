@@ -13,7 +13,10 @@ const routes = [
   { hash: "#niks", view: PostView },
   { hash: "#login", view: Login },
   { hash: "#dashboard", view:dashboard },
-  { hash: "#users", view:users}
+  { hash: "#users", view:users},
+  { hash: "#user_dashboard", view:user_dashboard},
+  {hash: '#add_admin', view:add_admin}
+
 ];
 
 var match;
