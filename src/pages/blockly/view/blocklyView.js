@@ -57,13 +57,13 @@ return `
         </td>
     </tr>
 </table>
-<div id="blocklyDiv" style="position: absolute;width:781px;height:591px;"></div>
+<div id="blocklyDiv" style="position: absolute;width:100%;height:90vh;"></div>
 <div id="textarea"></div>
 
 <xml  id="toolbox" style="display: none">
     <block type="controls_if"></block>
-    <block type="logic_compare"></block>
-   <block type="controls_repeat_ext"></block>
+    <block type="logic_compare"> </block>
+    <!-- <block type="controls_repeat_ext"></block> -->
     <block type="math_number">
         <field name="NUM">123</field>
     </block>
@@ -72,6 +72,9 @@ return `
     <block type="text_print"></block>
 </xml>
 <script>
+    import Blockly from '../js/blockly_compressed.js';
+    import '../js/javascript_compressed.js';
+    import '../js/blocks_compressed.js';
     var blocklyArea = document.getElementById('blocklyArea');
     var blocklyDiv = document.getElementById('blocklyDiv');
     var demoWorkspace = Blockly.inject(blocklyDiv,
@@ -103,6 +106,12 @@ return `
         document.getElementById('textarea').setAttribute("class", "flipback");
         document.getElementById('textarea').innerText = xml;
     }
+
+    function rename() {
+        Blockly.Msg.CONTROLS_IF_MSG_IF = 'IF';
+        Blockly.Msg.CONTROLS_IF_MSG_THEN = 'THEN';
+    }
+        rename();
 
 </script>
 
