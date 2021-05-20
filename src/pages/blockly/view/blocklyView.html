@@ -1,3 +1,4 @@
+<button onclick="myUpdateFunction()"> Generate Code </button>
 <table style="height:90vh;width:100%;background-color:#fff;font-family:sans-serif;overflow:hidden;">
     <tr>
         <td id="blocklyArea">
@@ -46,8 +47,6 @@
     Blockly.svgResize(demoWorkspace);
     function myUpdateFunction() {
         var xml = Blockly.JavaScript.workspaceToCode(demoWorkspace);
-        document.getElementById('blocklyDiv').setAttribute("class", "flipper");
-        document.getElementById('textarea').setAttribute("class", "flipback");
         document.getElementById('textarea').innerText = xml;
     }
 

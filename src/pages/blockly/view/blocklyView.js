@@ -51,6 +51,7 @@ export default class extends AbstractView {
     //@html:start
 async getHtml() {
 return `
+<button onclick="myUpdateFunction()"> Generate Code </button>
 <table style="height:90vh;width:100%;background-color:#fff;font-family:sans-serif;overflow:hidden;">
     <tr>
         <td id="blocklyArea">
@@ -62,7 +63,7 @@ return `
 
 <xml  id="toolbox" style="display: none">
     <block type="controls_if"></block>
-    <block type="logic_compare"> </block>
+    <block type="logic_compare"></block>
     <!-- <block type="controls_repeat_ext"></block> -->
     <block type="math_number">
         <field name="NUM">123</field>
@@ -72,9 +73,6 @@ return `
     <block type="text_print"></block>
 </xml>
 <script>
-    import Blockly from '../js/blockly_compressed.js';
-    import '../js/javascript_compressed.js';
-    import '../js/blocks_compressed.js';
     var blocklyArea = document.getElementById('blocklyArea');
     var blocklyDiv = document.getElementById('blocklyDiv');
     var demoWorkspace = Blockly.inject(blocklyDiv,
@@ -102,16 +100,8 @@ return `
     Blockly.svgResize(demoWorkspace);
     function myUpdateFunction() {
         var xml = Blockly.JavaScript.workspaceToCode(demoWorkspace);
-        document.getElementById('blocklyDiv').setAttribute("class", "flipper");
-        document.getElementById('textarea').setAttribute("class", "flipback");
         document.getElementById('textarea').innerText = xml;
     }
-
-    function rename() {
-        Blockly.Msg.CONTROLS_IF_MSG_IF = 'IF';
-        Blockly.Msg.CONTROLS_IF_MSG_THEN = 'THEN';
-    }
-        rename();
 
 </script>
 

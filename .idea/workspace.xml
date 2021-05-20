@@ -22,11 +22,7 @@
     <list default="true" id="196d6139-a0e3-4d1b-b693-b3ce81963394" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blockly/blockly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/blockly.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blockly/view/blocklyView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.js" afterDir="false" />
@@ -54,6 +50,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1sbn77fTpLxrJd8Yl98iGqYDphK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
