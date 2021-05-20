@@ -1,18 +1,3 @@
-import AbstractView from "../../js/AbstractView";
-
-
-export default class extends AbstractView {
-  constructor(params) {
-    super(params);
-  }
-
-  afterInit() {
-  }
-
-
-  //@html:start
-async getHtml() {
-return `
 <div id="app"></div> 
 <script src="https://unpkg.com/blockly/blockly.min.js"></script>
 <div id="blocklyDiv" style="height: 100vh; width: 100vw;"></div>
@@ -75,7 +60,3 @@ return `
     toolbox: document.getElementById("toolbox")
   });
 </script>
-`;
-}
-//@html:end
-}
