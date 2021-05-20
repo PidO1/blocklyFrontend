@@ -8873,7 +8873,7 @@ window.addEventListener("hashchange", /*#__PURE__*/_asyncToGenerator( /*#__PURE_
 hashLoad();
 var navToPage = function navToPage() {
   var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  window.location.href = '/sample.html';
+  window.location.href = '/blocks.html';
 };
 
 /***/ }),
@@ -9182,8 +9182,8 @@ var getUserFromRequest = function getUserFromRequest(res) {
 var getUserFromCookie = function getUserFromCookie() {
   var cookie;
   if (document.cookie) cookie = document.cookie.split('; ').find(function (row) {
-    return row.startsWith('token=');
-  }).split('=')[1];
+    if (row.indexOf('token=') > -1) return row.split('=')[1];
+  });
   if (cookie != undefined) user.token = cookie;
   console.log(user);
 };

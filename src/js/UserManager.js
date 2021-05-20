@@ -51,7 +51,7 @@ export const getUserFromRequest = (res) => {
     if (json != undefined && json.token != undefined) {
       document.cookie = `token=${json.token}`;
       navToPage();
-      user.token = json.token; 
+      user.token = json.token;
     } else {
       alert('Login Error')
     }
@@ -62,9 +62,11 @@ export const getUserFromCookie = () => {
   let cookie;
   if (document.cookie)
     cookie = document.cookie.split('; ')
-    .find(row => row.startsWith('token='))
-    .split('=')[1];
-  if (cookie != undefined) 
+      .find(row => {
+        if (row.indexOf('token=') > -1)
+          return row.split('=')[1]; 
+      });
+  if (cookie != undefined)
     user.token = cookie;
 
   console.log(user);

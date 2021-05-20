@@ -44,5 +44,5 @@ window.addEventListener("hashchange", async function () {
 hashLoad();
 
 export const navToPage = (page = '') => {
-  window.location.href = '/sample.html';
+  window.location.href = '/blocks.html';
 }
