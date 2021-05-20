@@ -1,8 +1,5 @@
 import AbstractView from "../../js/AbstractView";
-import { loginURL } from "../../js/config";
-import {
-    getUserFromRequest, isUserSignedIn, login
-} from "../../js/UserManager.js";
+import {isUserSignedIn} from "../../js/UserManager.js";
 
 
 export default class extends AbstractView {
@@ -64,7 +61,10 @@ export default class extends AbstractView {
         document.getElementById('noProjects').addEventListener('mouseenter', () => isUserSignedIn() ? this.removeNoProjectsSignIn() : this.addNoProjectsSignIn());
         this.newProject.addEventListener("click", () => {
             if (!isUserSignedIn()) {
-                login().then((r)=>console.log(r));
+                window.location.href = '#login';
+            } else {
+                //TODO
+                console.log('New Project');
             }
         });
     }

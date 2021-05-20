@@ -1,9 +1,12 @@
 import Login from "../pages/login/login";
 import Landing from "../pages/landing/landing";
+import Sample from "../pages/sample/sample";
+import { getUserFromCookie } from "./UserManager";
 
 const routes = [
   { hash: "", view: Landing },
   { hash: "#login", view: Login },
+  { hash: "#sample", view: Sample },
   // { hash: "#blocks", view: Blockly },
 ];
 
@@ -18,6 +21,7 @@ async function loadContent() {
 }
 
 function hashLoad() {
+  getUserFromCookie();
   var perfEntries = performance.getEntriesByType("navigation");
   for (var i = 0; i < perfEntries.length; i++) {
     var p = perfEntries[i];
@@ -28,7 +32,8 @@ function hashLoad() {
 }
 
 //tried using a named function, but wouldn't trigger 
-window.addEventListener("hashchange", async function() {
+window.addEventListener("hashchange", async function () {
+  getUserFromCookie();
   match = routes.find(potentialMatch => potentialMatch.hash == location.hash);
   document.querySelector("#app").innerHTML = await new match.view().getHtml();
   console.log(match.hash + " found it");
@@ -36,3 +41,7 @@ window.addEventListener("hashchange", async function() {
   new match.view().afterInit();
 });
 hashLoad();
+
+export const navToPage = (page = '') => {
+  window.location.pathname = 'sample.html';
+}

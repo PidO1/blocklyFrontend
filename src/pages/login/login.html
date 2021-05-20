@@ -1,15 +1,15 @@
 <section class="login">
   <form class="middle" id="userForm">
     <h2>Login</h2>
-    <input name="email" autocomplete="true" type="email" placeholder="Email" id="loginEmail" />
-    <input name="password" autocomplete="true" type="password" placeholder="Password" id="loginPassword" />
+    <input name="email" autocomplete="true" type="email" placeholder="Your Email" id="loginEmail" required />
+    <input name="password" autocomplete="true" type="password" placeholder="Your Password" id="loginPassword" required/>
     <p style="display: flex; justify-content: flex-end;">
-      <input type="checkbox" id="loginShowPassword"/>
+      <input type="checkbox" id="loginShowPassword" />
       <label for="loginShowPassword">Show Password</label> 
     </p> 
     <div class="button-bar">
-      <button id='loginButtonRegister' type="button">Register</button>
-      <button id='loginButtonLogin' type="submit">Login</button>  
+      <button id='loginButtonRegister' type="submit">Register</button>  
+      <button id='loginButtonLogin' type="submit">Login</button>   
     </div>
   </form>
 </section>

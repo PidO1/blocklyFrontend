@@ -1,5 +1,6 @@
 import AbstractView from "../../js/AbstractView";
-import { login } from "../../js/UserManager";
+import { navToPage } from "../../js/router";
+import { isUserSignedIn, login, register } from "../../js/UserManager";
 
 
 export default class extends AbstractView {
@@ -19,26 +20,18 @@ export default class extends AbstractView {
         x.type = "password";
       }
     });
-    document.getElementById('loginEmail').addEventListener('change', () => {
-      this.modified[0] = true;
-      if (this.modified[0] && this.modified[1])
-        document.getElementById('loginButtonLogin').style.flex = '2';
-    });
-    document.getElementById('loginPassword').addEventListener('change', () => {
-      this.modified[1] = true;
-      if (this.modified[0] && this.modified[1])
-        document.getElementById('loginButtonLogin').style.flex = '2';
-    });
     const form = document.getElementById('userForm');
     form.addEventListener('submit', (ev) => {
-      login();
-      console.log(ev);
+      document.getElementById('loginButtonLogin').style.flex = '2';
+      const _register = ev.submitter.id == 'loginButtonRegister';
       var inputs = form.elements;
-      for (let i = 0; i < inputs.length; i++) {
-        // Disable all form controls
-        console.log(inputs[i]);
+      if (_register) {
+        register(inputs['email'].value,inputs['password'].value).then((r)=> console.log(r)).catch((e)=>console.error(e));
+      } else {
+        login(inputs['email'].value,inputs['password'].value).then((r)=> navToPage()).catch((e)=>console.error(e));
       }
       ev.preventDefault();
+      return false;
     })
   }
 
@@ -48,15 +41,15 @@ return `
 <section class="login">
   <form class="middle" id="userForm">
     <h2>Login</h2>
-    <input name="email" autocomplete="true" type="email" placeholder="Email" id="loginEmail" />
-    <input name="password" autocomplete="true" type="password" placeholder="Password" id="loginPassword" />
+    <input name="email" autocomplete="true" type="email" placeholder="Your Email" id="loginEmail" required />
+    <input name="password" autocomplete="true" type="password" placeholder="Your Password" id="loginPassword" required/>
     <p style="display: flex; justify-content: flex-end;">
-      <input type="checkbox" id="loginShowPassword"/>
+      <input type="checkbox" id="loginShowPassword" />
       <label for="loginShowPassword">Show Password</label> 
     </p> 
     <div class="button-bar">
-      <button id='loginButtonRegister' type="button">Register</button>
-      <button id='loginButtonLogin' type="submit">Login</button>  
+      <button id='loginButtonRegister' type="submit">Register</button>  
+      <button id='loginButtonLogin' type="submit">Login</button>   
     </div>
   </form>
 </section>
