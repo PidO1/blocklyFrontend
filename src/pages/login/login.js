@@ -1,5 +1,4 @@
 import AbstractView from "../../js/AbstractView";
-import { navToPage } from "../../js/router";
 import { isUserSignedIn, login, register } from "../../js/UserManager";
 
 
@@ -26,9 +25,9 @@ export default class extends AbstractView {
       const _register = ev.submitter.id == 'loginButtonRegister';
       var inputs = form.elements;
       if (_register) {
-        register(inputs['email'].value,inputs['password'].value).then((r)=> console.log(r)).catch((e)=>console.error(e));
+        register(inputs['email'].value,inputs['password'].value).catch((e)=>console.error(e));
       } else {
-        login(inputs['email'].value,inputs['password'].value).then((r)=> navToPage()).catch((e)=>console.error(e));
+        login(inputs['email'].value,inputs['password'].value).catch((e)=>console.error(e));
       }
       ev.preventDefault();
       return false;

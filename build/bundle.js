@@ -8810,19 +8810,20 @@ function _loadContent() {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
+            (0,_UserManager__WEBPACK_IMPORTED_MODULE_3__.getUserFromCookie)();
             match = routes.find(function (potentialMatch) {
               return potentialMatch.hash == location.hash;
             });
-            _context2.next = 3;
+            _context2.next = 4;
             return new match.view().getHtml();
 
-          case 3:
+          case 4:
             document.querySelector("#app").innerHTML = _context2.sent;
             console.log(match.hash + " found it");
             console.log(location.hash);
             new match.view().afterInit();
 
-          case 7:
+          case 8:
           case "end":
             return _context2.stop();
         }
@@ -8885,8 +8886,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ _default)
 /* harmony export */ });
 /* harmony import */ var _js_AbstractView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(312);
-/* harmony import */ var _js_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(310);
-/* harmony import */ var _js_UserManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(313);
+/* harmony import */ var _js_UserManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(313);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8914,7 +8914,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -8965,15 +8964,11 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                   var inputs = form.elements;
 
                   if (_register) {
-                    (0,_js_UserManager__WEBPACK_IMPORTED_MODULE_2__.register)(inputs['email'].value, inputs['password'].value).then(function (r) {
-                      return console.log(r);
-                    })["catch"](function (e) {
+                    (0,_js_UserManager__WEBPACK_IMPORTED_MODULE_1__.register)(inputs['email'].value, inputs['password'].value)["catch"](function (e) {
                       return console.error(e);
                     });
                   } else {
-                    (0,_js_UserManager__WEBPACK_IMPORTED_MODULE_2__.login)(inputs['email'].value, inputs['password'].value).then(function (r) {
-                      return (0,_js_router__WEBPACK_IMPORTED_MODULE_1__.navToPage)();
-                    })["catch"](function (e) {
+                    (0,_js_UserManager__WEBPACK_IMPORTED_MODULE_1__.login)(inputs['email'].value, inputs['password'].value)["catch"](function (e) {
                       return console.error(e);
                     });
                   }
@@ -9128,6 +9123,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "isUserSignedIn": () => (/* binding */ isUserSignedIn)
 /* harmony export */ });
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(314);
+/* harmony import */ var _router_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(310);
+
 
 var user = {
   token: String = undefined
@@ -9175,19 +9172,23 @@ var getUserFromRequest = function getUserFromRequest(res) {
 
     if (json != undefined && json.token != undefined) {
       document.cookie = "token=".concat(json.token);
+      (0,_router_js__WEBPACK_IMPORTED_MODULE_1__.navToPage)();
       user.token = json.token;
+    } else {
+      alert('Login Error');
     }
   });
 };
 var getUserFromCookie = function getUserFromCookie() {
   var cookie;
-  if (document.cookie) document.cookie.split('; ').find(function (row) {
+  if (document.cookie) cookie = document.cookie.split('; ').find(function (row) {
     return row.startsWith('token=');
   }).split('=')[1];
   if (cookie != undefined) user.token = cookie;
   console.log(user);
 };
 var isUserSignedIn = function isUserSignedIn() {
+  getUserFromCookie();
   console.debug(user);
   return user.token != undefined;
 };
@@ -9204,7 +9205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var base = 'https://bbd-levelup-backend.herokuapp.com/';
 var loginURL = base + 'users/login';
-var registerURL = base + 'users/registerUser';
+var registerURL = base + 'users/register';
 
 /***/ }),
 /* 315 */
@@ -9216,7 +9217,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ _default)
 /* harmony export */ });
 /* harmony import */ var _js_AbstractView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(312);
-/* harmony import */ var _js_UserManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(313);
+/* harmony import */ var _js_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(310);
+/* harmony import */ var _js_UserManager_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(313);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -9244,6 +9246,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -9333,14 +9336,13 @@ var _default = /*#__PURE__*/function (_AbstractView) {
       document.getElementById('container').appendChild(this.noProjects);
       this.newProject = document.getElementById('newProject');
       document.getElementById('noProjects').addEventListener('mouseenter', function () {
-        return (0,_js_UserManager_js__WEBPACK_IMPORTED_MODULE_1__.isUserSignedIn)() ? _this3.removeNoProjectsSignIn() : _this3.addNoProjectsSignIn();
+        return (0,_js_UserManager_js__WEBPACK_IMPORTED_MODULE_2__.isUserSignedIn)() ? _this3.removeNoProjectsSignIn() : _this3.addNoProjectsSignIn();
       });
       this.newProject.addEventListener("click", function () {
-        if (!(0,_js_UserManager_js__WEBPACK_IMPORTED_MODULE_1__.isUserSignedIn)()) {
+        if (!(0,_js_UserManager_js__WEBPACK_IMPORTED_MODULE_2__.isUserSignedIn)()) {
           window.location.href = '#login';
         } else {
-          //TODO
-          console.log('New Project');
+          (0,_js_router__WEBPACK_IMPORTED_MODULE_1__.navToPage)();
         }
       });
     }

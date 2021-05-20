@@ -1,4 +1,5 @@
 import AbstractView from "../../js/AbstractView";
+import { navToPage } from "../../js/router";
 import {isUserSignedIn} from "../../js/UserManager.js";
 
 
@@ -63,8 +64,7 @@ export default class extends AbstractView {
             if (!isUserSignedIn()) {
                 window.location.href = '#login';
             } else {
-                //TODO
-                console.log('New Project');
+                navToPage();
             }
         });
     }

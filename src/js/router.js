@@ -13,6 +13,7 @@ const routes = [
 var match;
 
 async function loadContent() {
+  getUserFromCookie();
   match = routes.find(potentialMatch => potentialMatch.hash == location.hash);
   document.querySelector("#app").innerHTML = await new match.view().getHtml();
   console.log(match.hash + " found it");

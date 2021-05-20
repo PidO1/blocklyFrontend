@@ -3,6 +3,8 @@ import {
   registerURL
 } from "./config";
 
+import { navToPage } from "./router.js";
+
 export let user = {
   token: String = undefined,
 };
@@ -48,16 +50,18 @@ export const getUserFromRequest = (res) => {
     console.debug(json);
     if (json != undefined && json.token != undefined) {
       document.cookie = `token=${json.token}`;
+      navToPage();
       user.token = json.token; 
+    } else {
+      alert('Login Error')
     }
   });
 }
 
 export const getUserFromCookie = () => {
-
   let cookie;
   if (document.cookie)
-    document.cookie.split('; ')
+    cookie = document.cookie.split('; ')
     .find(row => row.startsWith('token='))
     .split('=')[1];
   if (cookie != undefined) 
@@ -67,6 +71,7 @@ export const getUserFromCookie = () => {
 }
 
 export const isUserSignedIn = () => {
+  getUserFromCookie();
   console.debug(user);
   return user.token != undefined
 }
