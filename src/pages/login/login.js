@@ -1,4 +1,5 @@
 import AbstractView from "../../js/AbstractView";
+import { login } from "../../js/UserManager";
 
 
 export default class extends AbstractView {
@@ -28,13 +29,24 @@ export default class extends AbstractView {
       if (this.modified[0] && this.modified[1])
         document.getElementById('loginButtonLogin').style.flex = '2';
     });
+    const form = document.getElementById('userForm');
+    form.addEventListener('submit', (ev) => {
+      login();
+      console.log(ev);
+      var inputs = form.elements;
+      for (let i = 0; i < inputs.length; i++) {
+        // Disable all form controls
+        console.log(inputs[i]);
+      }
+      ev.preventDefault();
+    })
   }
 
   //@html:start
 async getHtml() {
 return `
 <section class="login">
-  <form class="middle">
+  <form class="middle" id="userForm">
     <h2>Login</h2>
     <input name="email" autocomplete="true" type="email" placeholder="Email" id="loginEmail" />
     <input name="password" autocomplete="true" type="password" placeholder="Password" id="loginPassword" />
@@ -44,7 +56,7 @@ return `
     </p> 
     <div class="button-bar">
       <button id='loginButtonRegister' type="button">Register</button>
-      <button id='loginButtonLogin' type="button">Login</button>
+      <button id='loginButtonLogin' type="submit">Login</button>  
     </div>
   </form>
 </section>

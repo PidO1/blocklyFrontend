@@ -1,4 +1,8 @@
 import AbstractView from "../../js/AbstractView";
+import { loginURL } from "../../js/config";
+import {
+    getUserFromRequest, isUserSignedIn, login
+} from "../../js/UserManager.js";
 
 
 export default class extends AbstractView {
@@ -18,6 +22,7 @@ export default class extends AbstractView {
         this.noProjects = document.getElementById('noProjects');
         this.noProjectsSignIn = document.getElementById('newProject_signIn');
         this.projects = document.getElementById('projects');
+        this.removeNoProjectsSignIn() 
         this.removeNoProjects();
         // this.removeLoader();
         this.removeProjects();
@@ -56,8 +61,11 @@ export default class extends AbstractView {
     addNoProjects() {
         document.getElementById('container').appendChild(this.noProjects);
         this.newProject = document.getElementById('newProject');
+        document.getElementById('noProjects').addEventListener('mouseenter', () => isUserSignedIn() ? this.removeNoProjectsSignIn() : this.addNoProjectsSignIn());
         this.newProject.addEventListener("click", () => {
-            window.location.href = "#blocks";
+            if (!isUserSignedIn()) {
+                login().then((r)=>console.log(r));
+            }
         });
     }
 
@@ -66,7 +74,8 @@ export default class extends AbstractView {
     }
 
     addNoProjectsSignIn() {
-        this.noProjects.appendChild(this.noProjectsSignIn);
+        if(!document.getElementById('newProject_signIn'))
+            document.getElementById('newProject').appendChild(this.noProjectsSignIn);
     }
 
     //@html:start
@@ -83,7 +92,7 @@ return `
         <label class='leading'>Looks like you dont have any projects.</label>
         <label>Maybe you should create one!</label>
         <button id='newProject'>
-            New Project 
+            New Project
             <span id='newProject_signIn'> and Sign in</span> 
         </button> 
     </section> 

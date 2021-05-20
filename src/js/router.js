@@ -1,11 +1,10 @@
 import Login from "../pages/login/login";
-import Blockly from "../pages/blockly/view/blocklyView";
 import Landing from "../pages/landing/landing";
 
 const routes = [
   { hash: "", view: Landing },
   { hash: "#login", view: Login },
-  { hash: "#blocks", view: Blockly },
+  // { hash: "#blocks", view: Blockly },
 ];
 
 var match;

@@ -80,7 +80,7 @@ function npmRunBuild() {
 gulp.task('server:startStop', async function () {
     connect.server({
         root: 'build',
-        livereload: true,
+        livereload: false,
         https: true
     });
     return connect.serverClose();
