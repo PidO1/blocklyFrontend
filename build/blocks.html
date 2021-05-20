@@ -249,7 +249,7 @@
       },
       zoom: {
         controls: true,
-        wheel: true,
+        wheel: false,
         startScale: 1.0,
         maxScale: 10,
         minScale: 0.3,
@@ -261,11 +261,8 @@
     var code = Blockly.JavaScript.workspaceToCode(workspace);
     workspace.addChangeListener(() => {
       var code = Blockly.JavaScript.workspaceToCode(workspace);
-      console.log('generate', code);
       document.getElementById('textarea').innerHTML = '<br/>' + code;
     });
-
-
 
     function download(filename, text) {
       var element = document.createElement('a');
@@ -287,13 +284,15 @@
 
     document.getElementById("saveBtn").addEventListener("click", function () {
       var text = document.getElementById("textarea").innerText;
+      var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
       const params = {
         headers: {
           'content-type': 'application/json; charset=UTF-8',
-          // 'Authorization': `Basic ${username}:${password}`
+          'jwt_token': getUserFromCookie().split('=')[1]
         },
         body: JSON.stringify({
-
+          "xml": `${Blockly.Xml.domToText(xml)}`,
+          "token": getUserFromCookie().split('=')[1],
         }),
         method: 'POST'
       };

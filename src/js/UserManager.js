@@ -32,7 +32,7 @@ export const login = (username, password) => {
 export const register = (username, password) => {
   const params = {
     headers: {
-      'content-type': 'application/json; charset=UTF-8',
+      'content-type': 'application/json; charset=UTF-8', 
       // 'Authorization': `Basic ${username}:${password}`    
     },
     body: JSON.stringify({
