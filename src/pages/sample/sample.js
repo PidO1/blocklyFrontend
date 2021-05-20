@@ -15,7 +15,13 @@ async getHtml() {
 return `
 <div id="app"></div> 
 <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-<div id="blocklyDiv" style="height: 100vh; width: 100vw;"></div>
+<script src="blockly_compressed.js"></script>
+<script src="javascript_compressed.js"></script>
+<div style="max-height: 80vh; width: 100vw;">
+  <div id="blocklyDiv" style="max-height: 80vh; width: 100vw;"></div>
+  <code id='textarea'></code>
+</div>
+
 <xml id="toolbox" style="display: none;">
   <block type="controls_if"></block>
   <block type="controls_repeat_ext"></block>
@@ -74,6 +80,12 @@ return `
   var workspace = Blockly.inject("blocklyDiv", {
     toolbox: document.getElementById("toolbox")
   });
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  function myUpdateFunction(event) {
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  document.getElementById('textarea').value = code;
+}
+workspace.addChangeListener(myUpdateFunction);
 </script>
 `;
 }

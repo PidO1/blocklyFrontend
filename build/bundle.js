@@ -8872,7 +8872,7 @@ window.addEventListener("hashchange", /*#__PURE__*/_asyncToGenerator( /*#__PURE_
 hashLoad();
 var navToPage = function navToPage() {
   var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  window.location.pathname = 'sample.html';
+  window.location.href = '/sample.html';
 };
 
 /***/ }),
